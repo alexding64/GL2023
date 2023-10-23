@@ -10,15 +10,19 @@ public class Computer {
     }
 
     public void setCpu(Cpu cpu){
+    	this.cpu = cpu;
     }
 
-    public void setMemory(Memory mem){
+    public void setMemory(Memory memory){
+    	this.memory = memory;
     }
 
     public void setOutputController(OutputController outputController){
+    	this.outputController = outputController;
     }
 
-    public void setTestPlan(TestPlan plan){
+    public void setTestPlan(TestPlan testPlan){
+    	this.testPlan = testPlan;
     }
 
     private boolean init_memory(Map<String,Matrix> mat){
