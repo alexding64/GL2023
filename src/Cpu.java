@@ -14,6 +14,7 @@ public class Cpu extends Component
         this.rotation_cost = rotation_cost;
         this.resolution_cost = resolution_cost;
     }
+<<<<<<< HEAD
     
     /**
      * GETTER & SETTER
@@ -36,6 +37,26 @@ public class Cpu extends Component
 
     public void setRotationCost(int rotation_cost) 
     {
+=======
+
+     /*
+     * Class Getter and Setter
+     */
+    
+    public int getPermutationCost() {
+        return permutation_cost;
+    }
+
+    public void setPermutationCost(int permutation_cost) {
+        this.permutation_cost = permutation_cost;
+    }
+
+    public int getRotationCost() {
+        return rotation_cost;
+    }
+
+    public void setRotationCost(int rotation_cost) {
+>>>>>>> 5ffa70956c5fa63be3941857ae331ff899682973
         this.rotation_cost = rotation_cost;
     }
 
@@ -43,6 +64,7 @@ public class Cpu extends Component
         return resolution_cost;
     }
 
+<<<<<<< HEAD
     public void setResolutionCost(int resolution_cost) 
     {
         this.resolution_cost = resolution_cost;
@@ -50,6 +72,13 @@ public class Cpu extends Component
     
     public Matrix[] permutation(Matrix[] m)
     {
+=======
+    public void setResolutionCost(int resolution_cost) {
+        this.resolution_cost = resolution_cost;
+    }
+    
+    public Matrix[] permutation(Matrix[] m){
+>>>>>>> 5ffa70956c5fa63be3941857ae331ff899682973
         return m;
     }
 
