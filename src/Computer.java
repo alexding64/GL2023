@@ -13,29 +13,10 @@ public class Computer
     	
     }
 
-<<<<<<< HEAD
     /**
      * GETTER & SETTER
      */
     
-    public void setCpu(Cpu cpu)
-    {
-    	this.cpu = cpu;
-    }
-
-    public void setMemory(Memory memory)
-    {
-    	this.memory = memory;
-    }
-
-    public void setOutputController(OutputController outputController)
-    {
-    	this.outputController = outputController;
-    }
-
-    public void setTestPlan(TestPlan testPlan)
-    {
-=======
     public void setCpu(Cpu cpu){
     	this.cpu = cpu;
     }
@@ -48,8 +29,8 @@ public class Computer
     	this.outputController = outputController;
     }
 
-    public void setTestPlan(TestPlan testPlan){
->>>>>>> 5ffa70956c5fa63be3941857ae331ff899682973
+    public void setTestPlan(TestPlan testPlan)
+    {
     	this.testPlan = testPlan;
     }
 

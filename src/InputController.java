@@ -2,7 +2,7 @@ public class InputController
 {
 	
     private FileReader fileReader;
-<<<<<<< HEAD
+
  
     /*
      * Main menu display with component list display
@@ -12,10 +12,6 @@ public class InputController
     
     public static void displayMainMenu()
     {
-=======
-
-    public void displayMainMenu(){
->>>>>>> 5ffa70956c5fa63be3941857ae331ff899682973
         System.out.println("======== MAIN_MENU ========");
         System.out.println("");
         System.out.println("CPU : " + "Aucun");
@@ -35,7 +31,6 @@ public class InputController
         System.out.println("-----------------------------------");
     }
 
-<<<<<<< HEAD
     public void displayTestPlanList()
     {
 
@@ -46,17 +41,10 @@ public class InputController
      * The user will choose his controller that he wants
      * @author 
      * @version (En cours)
-     */
-    
+     */  
+
     public static void displayCpuList()
     {
-=======
-    public void displayTestPlanList(){
-
-    }
-
-    public void displayCpuList(){
->>>>>>> 5ffa70956c5fa63be3941857ae331ff899682973
     	clearConsole();
         System.out.println("======== CPU_CHOICE ========\n");
         System.out.println("CPU disponibles : ");
@@ -71,7 +59,6 @@ public class InputController
         System.out.println("0. Quitter");
         System.out.println("");
         System.out.println("-----------------------------------");
-<<<<<<< HEAD
     }
   
     /*
@@ -119,50 +106,15 @@ public class InputController
              3. <nom_out_3>
              ...
              n. <nom_out_n>
-=======
-    }
-
-    public void displayMemoryList(){
-    	clearConsole();
-        System.out.println("======== MEM_CHOICE ========\n");
-        System.out.println("Mémoires disponibles : ");
-        //affichage à faire
-        /*
-         *   1. <nom_mem_1>
-  			 2. <nom_mem_2>
-             3. <nom_mem_3>
-             ...
-             n. <nom_mem_n>
->>>>>>> 5ffa70956c5fa63be3941857ae331ff899682973
-         */
+             */
         System.out.println("0. Quitter");
         System.out.println("");
         System.out.println("-----------------------------------");
     }
 
-<<<<<<< HEAD
     public int getMainMenuChoice()
     {
-=======
-    public void displayOutputCtrlList(){
-    	clearConsole();
-        System.out.println("======== OUT_CHOICE ========\n");
-        System.out.println("Controlleurs de sortie disponibles : ");
-        //affichage à faire
-        /*
-         *   1. <nom_out_1>
-  			 2. <nom_out_2>
-             3. <nom_out_3>
-             ...
-             n. <nom_out_n>
-         */
-        System.out.println("0. Quitter");
-        System.out.println("");
-        System.out.println("-----------------------------------");
-    }
 
-    public int getMainMenuChoice(){
->>>>>>> 5ffa70956c5fa63be3941857ae331ff899682973
         return 0;
     }
 
@@ -185,15 +137,9 @@ public class InputController
     {
         return new OutputController();
     }
-<<<<<<< HEAD
-  
 
     public static void clearConsole()     //A revoir cette fonction
     {
-=======
-    
-    public static void clearConsole() {
->>>>>>> 5ffa70956c5fa63be3941857ae331ff899682973
         System.out.print("\033[H\033[2J \n \n");
         System.out.flush();
     }
