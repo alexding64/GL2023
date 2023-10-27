@@ -14,7 +14,7 @@ public class InputController
 
     /*
      * Main menu display with component list display
-     * @author 
+     * @author Aurélien Paquet
      * @version 1.0
      */
     
@@ -39,7 +39,8 @@ public class InputController
         System.out.println("-----------------------------------");
     }
 
-    public void displayTestPlanList() {
+    public void displayTestPlanList() 
+    {
         File folder = new File("TestPlanList");
         File[] files = folder.listFiles();
         int choice = 1;
@@ -67,8 +68,8 @@ public class InputController
     /*
      * CPU list display 
      * The user will choose his controller that he wants
-     * @author 
-     * @version (En cours)
+     * @author Aurélien Paquet
+     * @version 1.0
      */  
 
     public static void displayCpuList()
@@ -105,33 +106,12 @@ public class InputController
         }
     }
 
-    public static int getCpuChoice(int maxChoice) {
-        Scanner scanner = new Scanner(System.in);
-        int choice = -1;
-
-        while (true) {
-            System.out.print("Votre choix : ");
-            if (scanner.hasNextInt()) {
-                choice = scanner.nextInt();
-                if (choice >= 0 && choice <= maxChoice) {
-                    break; // Sort de la boucle si le choix est valide
-                } else {
-                    System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
-                }
-            } else {
-                scanner.next(); // Pour consommer l'entrée invalide
-                System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
-            }
-        }
-
-        return choice;
-    }
     
     /*
      * Memory Composants list display 
      * The user will choose his controller that he wants
-     * @author 
-     * @version (En cours)
+     * @author Aurélien Paquet
+     * @version 1.0
      */
     
     public static void displayMemoryList()
@@ -164,8 +144,8 @@ public class InputController
     /*
      * Output conroller list display 
      * The user will choose his controller that he wants
-     * @author 
-     * @version (En cours)
+     * @author Aurélien Paquet
+     * @version 1.0
      */
     
     public static void displayOutputCtrlList()
@@ -205,7 +185,31 @@ public class InputController
         return choix;
     }
 
-    public static int getTestPlanChoice(int maxChoice) {
+    public static int getCpuChoice(int maxChoice) 
+    {
+        Scanner scanner = new Scanner(System.in);
+        int choice = -1;
+
+        while (true) {
+            System.out.print("Votre choix : ");
+            if (scanner.hasNextInt()) {
+                choice = scanner.nextInt();
+                if (choice >= 0 && choice <= maxChoice) {
+                    break; // Sort de la boucle si le choix est valide
+                } else {
+                    System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
+                }
+            } else {
+                scanner.next(); // Pour consommer l'entrée invalide
+                System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
+            }
+        }
+
+        return choice;
+    }
+    
+    public static int getTestPlanChoice(int maxChoice) 
+    {
         Scanner scanner = new Scanner(System.in);
         int choice = -1;
 
@@ -227,7 +231,8 @@ public class InputController
         return choice;
     }
 
-    public static int getMemoryChoice(int maxChoice) {
+    public static int getMemoryChoice(int maxChoice) 
+    {
         Scanner scanner = new Scanner(System.in);
         int choice = -1;
 
@@ -249,7 +254,8 @@ public class InputController
         return choice;
     }
 
-    public static int getOutputCtrlChoice(int maxChoice) {
+    public static int getOutputCtrlChoice(int maxChoice) 
+    {
         Scanner scanner = new Scanner(System.in);
         int choice = -1;
 
@@ -271,7 +277,8 @@ public class InputController
         return choice;
     }
 
-    public static void clearConsole() {
+    public static void clearConsole() 
+    {
 
     }
 }
