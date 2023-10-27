@@ -12,10 +12,8 @@ public class MonSuperSysteme
         int choix = 0;
 
         do {
-        	InputController.displayMainMenu();
-            System.out.print("Votre choix : ");
-
-            choix = scanner.nextInt();
+            InputController.displayMainMenu();
+            choix = InputController.getMainMenuChoice();
 
             switch (choix) {
                 case 1:
