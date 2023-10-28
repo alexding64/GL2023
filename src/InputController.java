@@ -39,7 +39,7 @@ public class InputController
         System.out.println("-----------------------------------");
     }
 
-    public void displayTestPlanList() 
+    public static void displayTestPlanList()
     {
         File folder = new File("TestPlanList");
         File[] files = folder.listFiles();

@@ -1,15 +1,15 @@
 public class AdditionNTest 
 {
 	
-    public String matrix_1;
-    public String matrix_2;
+    public String matrix1;
+    public String matrix2;
     public String result;
     
 
-    public AdditionNTest(String matrix_1, String matrix_2, String result) 
+    public AdditionNTest(String matrix1, String matrix2, String result)
     {
-        this.matrix_1 = matrix_1;
-        this.matrix_2 = matrix_2;
+        this.matrix1 = matrix1;
+        this.matrix2 = matrix2;
         this.result = result;
     }
 
@@ -18,19 +18,19 @@ public class AdditionNTest
      */
     
     public String getMatrix1() {
-        return matrix_1;
+        return matrix1;
     }
 
-    public void setMatrix1(String matrix_1) {
-        this.matrix_1 = matrix_1;
+    public void setMatrix1(String matrix1) {
+        this.matrix1 = matrix1;
     }
 
     public String getMatrix2() {
-        return matrix_2;
+        return matrix2;
     }
 
-    public void setMatrix2(String matrix_2) {
-        this.matrix_2 = matrix_2;
+    public void setMatrix2(String matrix2) {
+        this.matrix2 = matrix2;
     }
 
     public String getResult() {

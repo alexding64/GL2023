@@ -1,7 +1,5 @@
 import java.util.Map;
 
-import Tools.Matrix;
-
 public class Memory extends Component 
 {
 
@@ -24,7 +22,7 @@ public class Memory extends Component
 
     public Matrix get(String address)
     {
-        return new Matrix();
+        return null;
     }
 
 

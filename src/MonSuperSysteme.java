@@ -26,7 +26,7 @@ public class MonSuperSysteme
                 	InputController.displayOutputCtrlList();
                     break;
                 case 4:
-                	InputController.displayOutputCtrlList();
+                	InputController.displayTestPlanList();
                     break;
                 case 5:
                     // Exécution

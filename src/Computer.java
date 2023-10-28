@@ -8,6 +8,13 @@ public class Computer
     private Cpu cpu;
     private TestPlan testPlan;
 
+    public void Computer(Memory memory, OutputController outputController, Cpu cpu, TestPlan testPlan) {
+        this.memory = memory;
+        this.outputController = outputController;
+        this.cpu = cpu;
+        this.testPlan = testPlan;
+    }
+
     public void exec()
     {
     	

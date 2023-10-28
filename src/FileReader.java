@@ -22,16 +22,16 @@ public class FileReader
 
     public Cpu getCpu(Cpu path)
     {
-        return new Cpu();
+        return null;
     }
 
     public Memory getMemory(String path)
     {
-        return new Memory();
+        return null;
     }
 
     public OutputController getOutputController(String path)
     {
-        return new OutputController();
+        return new OutputController("", 0);
     }
 }
