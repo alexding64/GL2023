@@ -7,8 +7,11 @@ public class InputController
 	
     private FileReader fileReader;
     private static String selectedCPU = "Aucun";
+    private static Cpu cpu;
     private static String selectedMemory = "Aucun";
+    private static Memory memory;
     private static String selectedController = "Aucun";
+    private static OutputController outputController;
     private static String selectedTestPlan = "Aucun";
 
 
@@ -99,6 +102,8 @@ public class InputController
 
             if (userChoice >= 1 && userChoice < choice) {
                 selectedCPU = files[userChoice - 1].getName().replace(".txt", "");
+                FileReader fileReader = new FileReader();
+                cpu = fileReader.getCpu("./configFiles/cpuList/" + files[userChoice - 1].getName());
                 break; // Sortez de la boucle si l'utilisateur a fait un choix valide
             } else if (userChoice == 0) {
                 break; // Sortez de la boucle si l'utilisateur choisit de quitter
@@ -137,6 +142,8 @@ public class InputController
 
         if (userChoice >= 1 && userChoice < choice) {
             selectedMemory = files[userChoice - 1].getName().replace(".txt", "");
+            FileReader fileReader = new FileReader();
+            memory = fileReader.getMemory("./configFiles/memoryList/" + files[userChoice - 1].getName());
         }
     }
 
@@ -171,6 +178,8 @@ public class InputController
 
         if (userChoice >= 1 && userChoice < choice) {
             selectedController = files[userChoice - 1].getName().replace(".txt", "");
+            FileReader fileReader = new FileReader();
+            outputController = fileReader.getOutputController("./configFiles/outputList/" + files[userChoice - 1].getName());
         }
     }
 
@@ -204,7 +213,6 @@ public class InputController
                 System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
             }
         }
-
         return choice;
     }
     

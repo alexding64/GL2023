@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Compilation + Rectification menu">
-      <change afterPath="$PROJECT_DIR$/configFiles/cpuList/AMD Ryzen 7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configFiles/cpuList/Intel Core I3 5600.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configFiles/cpuList/Intel Core I9 14100.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configFiles/outputList/Output1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configFiles/outputList/Output2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configFiles/outputList/Output3.txt" afterDir="false" />
+    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Changement structure dossier config&#10;Ajout attributs dans fichiers txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CPUlist/AMD Ryzen 7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CPUlist/Intel Core I3 5600.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CPUlist/Intel Core I9 14100.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControllerList/Bonsoir.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControllerList/List.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControllerList/TEST.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/TestPlanList/TEST.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryList/DDR5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/memoryList/DDR5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryList/HDD.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/memoryList/HDD.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryList/TEST.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/memoryList/TEST.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestPlanList/ASAQQQQ.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/TestPlanList/ASAQQQQ.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestPlanList/OUi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/TestPlanList/OUi.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestPlanList/TEST.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configFiles/cpuList/AMD Ryzen 7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/cpuList/AMD-Ryzen-7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +76,7 @@
       <updated>1697475958484</updated>
       <workItem from="1697475959545" duration="1000" />
       <workItem from="1698248574623" duration="497000" />
-      <workItem from="1698419989830" duration="3349000" />
+      <workItem from="1698419989830" duration="7625000" />
     </task>
     <task id="LOCAL-00001" summary="Compilation + Rectification menu">
       <option name="closed" value="true" />
@@ -102,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698521097916</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changement structure dossier config&#10;Ajout attributs dans fichiers txt">
+      <option name="closed" value="true" />
+      <created>1698521844382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698521844382</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Compilation + Rectification menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Compilation + Rectification menu" />
+    <MESSAGE value="Changement structure dossier config&#10;Ajout attributs dans fichiers txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changement structure dossier config&#10;Ajout attributs dans fichiers txt" />
   </component>
 </project>
