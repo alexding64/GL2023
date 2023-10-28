@@ -74,7 +74,7 @@ public class InputController
 
     public static void displayCpuList()
     {
-        File folder = new File("CPUlist");
+        File folder = new File("./configFiles/cpuList");
         File[] files = folder.listFiles();
         int choice = 1;
 
@@ -116,7 +116,7 @@ public class InputController
     
     public static void displayMemoryList()
     {
-        File folder = new File("MemoryList");
+        File folder = new File("./configFiles/memoryList");
         File[] files = folder.listFiles();
         int choice = 1;
 
@@ -150,7 +150,7 @@ public class InputController
     
     public static void displayOutputCtrlList()
     {
-        File folder = new File("ControllerList");
+        File folder = new File("./configFiles/outputList");
         File[] files = folder.listFiles();
         int choice = 1;
 

@@ -1,0 +1,3 @@
+permutationCost=5
+rotationCost=1
+resolutionCost=1
