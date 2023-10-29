@@ -30,6 +30,16 @@ public class MonSuperSysteme
                     break;
                 case 5:
                     // Exécution
+                    Memory memory = InputController.getMemory();
+                    Cpu cpu = InputController.getCpu();
+                    OutputController outputController = InputController.getOutputController();
+                    TestPlan testPlan = InputController.getTestPlan();
+
+                    if (memory != null && cpu != null && outputController != null && testPlan != null) {
+                        System.out.println("Work in progress...");
+                        Computer computer = new Computer(memory, outputController, cpu, testPlan);
+                        computer.exec();
+                    }
                     break;
                 case 6:
                     System.out.println("Au revoir !");

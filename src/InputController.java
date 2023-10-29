@@ -13,6 +13,7 @@ public class InputController
     private static String selectedController = "Aucun";
     private static OutputController outputController;
     private static String selectedTestPlan = "Aucun";
+    private static TestPlan testPlan;
 
 
     /*
@@ -44,7 +45,7 @@ public class InputController
 
     public static void displayTestPlanList()
     {
-        File folder = new File("TestPlanList");
+        File folder = new File("./configFiles/testPlanList");
         File[] files = folder.listFiles();
         int choice = 1;
 
@@ -285,7 +286,43 @@ public class InputController
         return choice;
     }
 
-    public static void clearConsole() 
+    /**
+     * Cpu getter
+     * @return cpu
+     */
+    public static Cpu getCpu()
+    {
+        return cpu;
+    }
+
+    /**
+     * Memory getter
+     * @return memory
+     */
+    public static Memory getMemory()
+    {
+        return memory;
+    }
+
+    /**
+     * Output getter
+     * @return outputController
+     */
+    public static OutputController getOutputController()
+    {
+        return outputController;
+    }
+
+    /**
+     * TestPlan Getter
+     * @return testPlan
+     */
+    public static TestPlan getTestPlan()
+    {
+        return testPlan;
+    }
+
+    public static void clearConsole()
     {
 
     }
