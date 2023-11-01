@@ -13,19 +13,64 @@ public class FileReader
         return new String['0'];
     }
 
-    public String[] getCpuList()
+    public String[] getCpuList(String directoryPath)
     {
-        return new String['0'];
+        File folder = new File(directoryPath);
+        File[] files = folder.listFiles();
+        List<String> cpuNames = new ArrayList<>();
+
+        if (files != null)
+        {
+            for (File file : files)
+            {
+                if (file.isFile() && file.getName().endsWith(".txt"))
+                {
+                    cpuNames.add(file.getName().replace(".txt", ""));
+                }
+            }
+        }
+
+        return cpuNames.toArray(new String[0]);
     }
 
-    public String[] getMemoryList()
+    public String[] getMemoryList(String directoryPath)
     {
-        return new String['0'];
+        File folder = new File(directoryPath);
+        File[] files = folder.listFiles();
+        List<String> memoryNames = new ArrayList<>();
+
+        if (files != null)
+        {
+            for (File file : files)
+            {
+                if (file.isFile() && file.getName().endsWith(".txt"))
+                {
+                	memoryNames.add(file.getName().replace(".txt", ""));
+                }
+            }
+        }
+
+        return memoryNames.toArray(new String[0]);
     }
 
-    public String[] getOutputCtrlList()
+    public String[] getOutputCtrlList(String directoryPath)
     {
-        return new String['0'];
+        File folder = new File(directoryPath);
+        File[] files = folder.listFiles();
+        List<String> outputNames = new ArrayList<>();
+
+        if (files != null)
+        {
+            for (File file : files)
+            {
+                if (file.isFile() && file.getName().endsWith(".txt"))
+                {
+                	outputNames.add(file.getName().replace(".txt", ""));
+                }
+            }
+        }
+
+        return outputNames.toArray(new String[0]);
     }
 
     public Cpu getCpu(String path)

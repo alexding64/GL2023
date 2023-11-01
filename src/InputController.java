@@ -5,16 +5,20 @@ import java.io.File;
 public class InputController 
 {
 	
-    private FileReader fileReader;
     private static String selectedCPU = "Aucun";
-    private static Cpu cpu;
     private static String selectedMemory = "Aucun";
-    private static Memory memory;
     private static String selectedController = "Aucun";
-    private static OutputController outputController;
     private static String selectedTestPlan = "Aucun";
+
+    private static Cpu cpu;
+    private static Memory memory;    
+    private static OutputController outputController;
     private static TestPlan testPlan;
 
+    private static String cpuPath = "./configFiles/cpuList";
+    private static String memoryPath = "./configFiles/memoryList";
+    private static String outputPath = "./configFiles/outputList";
+    private static String testplanPath = "./configFiles/testplanPath";
 
     /*
      * Main menu display with component list display
@@ -23,29 +27,65 @@ public class InputController
      */
     
     public static void displayMainMenu()
-    {    	
-        System.out.println("======== MAIN_MENU ========");
-        System.out.println("");
-        System.out.println("CPU : " + selectedCPU);
-        System.out.println("Memory : " + selectedMemory);
-        System.out.println("Contrôleur de sortie : " + selectedController);
-        System.out.println("Plan de test : " + selectedTestPlan);
-        System.out.println("");
-        System.out.println("-----------------------------------");
-        System.out.println("");
-        System.out.println("1. Choisir un CPU");
-        System.out.println("2. Choisir une mémoire");
-        System.out.println("3. Choisir un contrôleur de sortie");
-        System.out.println("4. Choisir un plan de test");
-        System.out.println("5. Exécution");
-        System.out.println("6. Quitter");
-        System.out.println("");
-        System.out.println("-----------------------------------");
+    {
+	    System.out.println("======== MAIN_MENU ========");
+	    System.out.println("");
+	    System.out.print("CPU : ");
+	    if ("Aucun".equals(selectedCPU)) {
+	        // Afficher en rouge
+	        System.out.print("\u001B[31m" + selectedCPU + "\u001B[0m"); // Code ANSI pour rouge
+	    } else {
+	        // Afficher en vert
+	        System.out.print("\u001B[32m" + selectedCPU + "\u001B[0m"); // Code ANSI pour vert
+	    }
+	    System.out.println("");
+	    
+	    System.out.print("Memory : ");
+	    if ("Aucun".equals(selectedMemory)) {
+	        // Afficher en rouge
+	        System.out.print("\u001B[31m" + selectedMemory + "\u001B[0m"); // Code ANSI pour rouge
+	    } else {
+	        // Afficher en vert
+	        System.out.print("\u001B[32m" + selectedMemory + "\u001B[0m"); // Code ANSI pour vert
+	    }
+	    System.out.println("");
+	    
+	    System.out.print("Contrôleur de sortie : ");
+	    if ("Aucun".equals(selectedController)) {
+	        // Afficher en rouge
+	        System.out.print("\u001B[31m" + selectedController + "\u001B[0m"); // Code ANSI pour rouge
+	    } else {
+	        // Afficher en vert
+	        System.out.print("\u001B[32m" + selectedController + "\u001B[0m"); // Code ANSI pour vert
+	    }
+	    System.out.println("");
+	    
+	    System.out.print("Plan de test : ");
+	    if ("Aucun".equals(selectedTestPlan)) {
+	        // Afficher en rouge
+	        System.out.print("\u001B[31m" + selectedTestPlan + "\u001B[0m"); // Code ANSI pour rouge
+	    } else {
+	        // Afficher en vert
+	        System.out.print("\u001B[32m" + selectedTestPlan + "\u001B[0m"); // Code ANSI pour vert
+	    }
+	    System.out.println("");
+	    
+	    System.out.println("");
+	    System.out.println("-----------------------------------");
+	    System.out.println("");
+	    System.out.println("1. Choisir un CPU");
+	    System.out.println("2. Choisir une mémoire");
+	    System.out.println("3. Choisir un contrôleur de sortie");
+	    System.out.println("4. Choisir un plan de test");
+	    System.out.println("5. Exécution");
+	    System.out.println("6. Quitter");
+	    System.out.println("");
+	    System.out.println("-----------------------------------");
     }
 
     public static void displayTestPlanList()
     {
-        File folder = new File("./configFiles/testPlanList");
+        File folder = new File(testplanPath);
         File[] files = folder.listFiles();
         int choice = 1;
 
@@ -82,8 +122,15 @@ public class InputController
 
     public static void displayCpuList()
     {
-        File folder = new File("./configFiles/cpuList");
-        File[] files = folder.listFiles();
+        FileReader fileReader = new FileReader();
+        String[] cpuList = fileReader.getCpuList(cpuPath);
+
+        if (cpuList.length == 0)
+        {
+            System.out.println("Aucun CPU disponible.");
+            return;
+        }
+
         int choice = 1;
 
         while (true)
@@ -91,33 +138,25 @@ public class InputController
             System.out.println("======== CPU_CHOICE ========\n");
             System.out.println("CPU disponibles : ");
 
-            if (files != null)
+            for (String cpuName : cpuList)
             {
-                for (File file : files)
-                {
-                    if (file.isFile() && file.getName().endsWith(".txt"))
-                    {
-                        System.out.println(choice + ". " + file.getName().replace(".txt", ""));
-                        choice++;
-                    }
-                }
+                System.out.println(choice + ". " + cpuName);
+                choice++;
             }
 
             System.out.println("0. Quitter");
             System.out.println("");
             System.out.println("-----------------------------------");
 
-            int userChoice = getCpuChoice(choice); // Obtenez le choix de l'utilisateur
+            int userChoice = getCpuChoice(cpuList.length); 
 
-            if (userChoice >= 1 && userChoice < choice)
+            if (userChoice >= 1 && userChoice <= cpuList.length)
             {
-                selectedCPU = files[userChoice - 1].getName().replace(".txt", "");
-                FileReader fileReader = new FileReader();
-                cpu = fileReader.getCpu("./configFiles/cpuList/" + files[userChoice - 1].getName());
-                break; // Sortez de la boucle si l'utilisateur a fait un choix valide
+                selectedCPU = cpuList[userChoice - 1];
+                break; 
             } else if (userChoice == 0)
             {
-                break; // Sortez de la boucle si l'utilisateur choisit de quitter
+                break; 
             }
         }
     }
@@ -132,33 +171,42 @@ public class InputController
     
     public static void displayMemoryList()
     {
-        File folder = new File("./configFiles/memoryList");
-        File[] files = folder.listFiles();
-        int choice = 1;
+        FileReader fileReader = new FileReader();
+        String[] memoryList = fileReader.getMemoryList(memoryPath);
 
-        if (files != null)
+        if (memoryList.length == 0)
         {
-            for (File file : files)
-            {
-                if (file.isFile() && file.getName().endsWith(".txt"))
-                {
-                    System.out.println(choice + ". " + file.getName().replace(".txt", ""));
-                    choice++;
-                }
-            }
+            System.out.println("Aucune mémoire disponible.");
+            return;
         }
 
-        System.out.println("0. Quitter");
-        System.out.println("");
-        System.out.println("-----------------------------------");
+        int choice = 1;
 
-        int userChoice = getMemoryChoice(choice); // Obtenez le choix de l'utilisateur
-
-        if (userChoice >= 1 && userChoice < choice)
+        while (true)
         {
-            selectedMemory = files[userChoice - 1].getName().replace(".txt", "");
-            FileReader fileReader = new FileReader();
-            memory = fileReader.getMemory("./configFiles/memoryList/" + files[userChoice - 1].getName());
+            System.out.println("======== MEMORY_CHOICE ========\n");
+            System.out.println("Mémoires disponibles : ");
+
+            for (String memoryName : memoryList)
+            {
+                System.out.println(choice + ". " + memoryName);
+                choice++;
+            }
+
+            System.out.println("0. Quitter");
+            System.out.println("");
+            System.out.println("-----------------------------------");
+
+            int userChoice = getMemoryChoice(memoryList.length); 
+
+            if (userChoice >= 1 && userChoice <= memoryList.length)
+            {
+                selectedMemory = memoryList[userChoice - 1];
+                break; 
+            } else if (userChoice == 0)
+            {
+                break; 
+            }
         }
     }
 
@@ -172,33 +220,43 @@ public class InputController
     
     public static void displayOutputCtrlList()
     {
-        File folder = new File("./configFiles/outputList");
-        File[] files = folder.listFiles();
-        int choice = 1;
+        FileReader fileReader = new FileReader();
+        String[] outputCtrlList = fileReader.getOutputCtrlList(outputPath);
 
-        if (files != null)
+        if (outputCtrlList.length == 0)
         {
-            for (File file : files)
-            {
-                if (file.isFile() && file.getName().endsWith(".txt"))
-                {
-                    System.out.println(choice + ". " + file.getName().replace(".txt", ""));
-                    choice++;
-                }
-            }
+            System.out.println("Aucun contrôleur de sortie disponible.");
+            return;
         }
 
-        System.out.println("0. Quitter");
-        System.out.println("");
-        System.out.println("-----------------------------------");
+        int choice = 1;
 
-        int userChoice = getOutputCtrlChoice(choice); // Obtenez le choix de l'utilisateur
-
-        if (userChoice >= 1 && userChoice < choice)
+        while (true)
         {
-            selectedController = files[userChoice - 1].getName().replace(".txt", "");
-            FileReader fileReader = new FileReader();
-            outputController = fileReader.getOutputController("./configFiles/outputList/" + files[userChoice - 1].getName());
+            System.out.println("======== OUTPUT_CTRL_CHOICE ========\n");
+            System.out.println("Contrôleurs de sortie disponibles : ");
+
+            for (String outputCtrlName : outputCtrlList)
+            {
+                System.out.println(choice + ". " + outputCtrlName);
+                choice++;
+            }
+
+            System.out.println("0. Quitter");
+            System.out.println("");
+            System.out.println("-----------------------------------");
+
+            int userChoice = getOutputCtrlChoice(outputCtrlList.length); 
+
+            if (userChoice >= 1 && userChoice <= outputCtrlList.length)
+            {
+                selectedController = outputCtrlList[userChoice - 1];
+
+                break; 
+            } else if (userChoice == 0)
+            {
+                break; 
+            }
         }
     }
 
