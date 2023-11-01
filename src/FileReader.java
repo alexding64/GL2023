@@ -33,7 +33,8 @@ public class FileReader
         File item = new File(path);
         List<String> parametersList = getValuesFromFile(item);
         String[] fileName = path.split("/");
-        return new Cpu(fileName[fileName.length-1], Integer.parseInt(parametersList.get(0)), Integer.parseInt(parametersList.get(1)), Integer.parseInt(parametersList.get(2)));
+        return new Cpu(fileName[fileName.length-1], Integer.parseInt(parametersList.get(0)),
+                Integer.parseInt(parametersList.get(1)), Integer.parseInt(parametersList.get(2)));
     }
 
     public Memory getMemory(String path)
@@ -41,7 +42,8 @@ public class FileReader
         File item = new File(path);
         List<String> parametersList = getValuesFromFile(item);
         String[] fileName = path.split("/");
-        return new Memory(fileName[fileName.length-1], Integer.parseInt(parametersList.get(0)), Integer.parseInt(parametersList.get(1)), new HashMap<String, Matrix>());
+        return new Memory(fileName[fileName.length-1], Integer.parseInt(parametersList.get(0)),
+                Integer.parseInt(parametersList.get(1)), new HashMap<String, Matrix>());
     }
 
     public OutputController getOutputController(String path)

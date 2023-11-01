@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="création des composants apres choix">
+    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Correction liste TestPlan&#10;Ajout structure Execution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configFiles/TestPlanList/ASAQQQQ.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/testPlanList/ASAQQQQ.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configFiles/TestPlanList/OUi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/testPlanList/OUi.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configFiles/TestPlanList/TEST.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configFiles/testPlanList/TEST.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MonSuperSysteme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonSuperSysteme.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +19,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "celianpth"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7d97d225-11a4-4f3a-b8db-5567cead152a" />
+        <option name="url" value="https://github.com/alexding64/GL2023.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -41,7 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/celia/Documents/Polytech/UQAC/T1/GenieLogiciel/Projet/DEV2 V1",
+    "last_opened_file_path": "C:/Users/celia/Documents/Polytech/UQAC/T1/GenieLogiciel/Projet/ProjetGL2023",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,7 +87,8 @@
       <updated>1697475958484</updated>
       <workItem from="1697475959545" duration="1000" />
       <workItem from="1698248574623" duration="497000" />
-      <workItem from="1698419989830" duration="10423000" />
+      <workItem from="1698419989830" duration="11095000" />
+      <workItem from="1698863440716" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="Compilation + Rectification menu">
       <option name="closed" value="true" />
@@ -105,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698526160274</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Correction liste TestPlan&#10;Ajout structure Execution">
+      <option name="closed" value="true" />
+      <created>1698592389631</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698592389631</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +132,7 @@
     <MESSAGE value="Compilation + Rectification menu" />
     <MESSAGE value="Changement structure dossier config&#10;Ajout attributs dans fichiers txt" />
     <MESSAGE value="création des composants apres choix" />
-    <option name="LAST_COMMIT_MESSAGE" value="création des composants apres choix" />
+    <MESSAGE value="Correction liste TestPlan&#10;Ajout structure Execution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction liste TestPlan&#10;Ajout structure Execution" />
   </component>
 </project>
