@@ -8,7 +8,8 @@ public class Computer
     private Cpu cpu;
     private TestPlan testPlan;
 
-    public Computer(Memory memory, OutputController outputController, Cpu cpu, TestPlan testPlan) {
+    public Computer(Memory memory, OutputController outputController, Cpu cpu, TestPlan testPlan)
+    {
         this.memory = memory;
         this.outputController = outputController;
         this.cpu = cpu;
@@ -24,15 +25,18 @@ public class Computer
      * GETTER & SETTER
      */
     
-    public void setCpu(Cpu cpu){
+    public void setCpu(Cpu cpu)
+    {
     	this.cpu = cpu;
     }
 
-    public void setMemory(Memory memory){
+    public void setMemory(Memory memory)
+    {
     	this.memory = memory;
     }
 
-    public void setOutputController(OutputController outputController){
+    public void setOutputController(OutputController outputController)
+    {
     	this.outputController = outputController;
     }
 
@@ -41,22 +45,22 @@ public class Computer
     	this.testPlan = testPlan;
     }
 
-    private boolean init_memory(Map<String,Matrix> mat)
+    private boolean initMemory(Map<String,Matrix> mat)
     {
         return false;
     }
 
-    private int exec_test(Test test)
+    private int execTest(Test test)
     {
         return 0;
     }
 
-    private int scalar_addition(String src)
+    private int scalarAddition(String src)
     {
         return 0;
     }
 
-    private int scalar_n_addition(String mat1, String mat2, String dest)
+    private int scalarNAddition(String mat1, String mat2, String dest)
     {
         return 0;
     }

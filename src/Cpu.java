@@ -3,16 +3,16 @@ import java.util.List;
 public class Cpu extends Component 
 {
 	
-    private int permutation_cost;
-    private int rotation_cost;
-    private int resolution_cost;
+    private int permutationCost;
+    private int rotationCost;
+    private int resolutionCost;
 
-    public Cpu(String name, int permutation_cost, int rotation_cost, int resolution_cost) 
+    public Cpu(String name, int permutationCost, int rotationCost, int resolutionCost)
     {
         super(name);
-        this.permutation_cost = permutation_cost;
-        this.rotation_cost = rotation_cost;
-        this.resolution_cost = resolution_cost;
+        this.permutationCost = permutationCost;
+        this.rotationCost = rotationCost;
+        this.resolutionCost = resolutionCost;
     }
     
     /**
@@ -21,31 +21,32 @@ public class Cpu extends Component
     
     public int getPermutationCost() 
     {
-        return permutation_cost;
+        return permutationCost;
     }
 
-    public void setPermutationCost(int permutation_cost) 
+    public void setPermutationCost(int permutationCost)
     {
-        this.permutation_cost = permutation_cost;
+        this.permutationCost = permutationCost;
     }
 
     public int getRotationCost() 
     {
-        return rotation_cost;
+        return rotationCost;
     }
 
-    public void setRotationCost(int rotation_cost) 
+    public void setRotationCost(int rotationCost)
     {
-        this.rotation_cost = rotation_cost;
+        this.rotationCost = rotationCost;
     }
 
-    public int getResolutionCost() {
-        return resolution_cost;
-    }
-
-    public void setResolutionCost(int resolution_cost) 
+    public int getResolutionCost()
     {
-        this.resolution_cost = resolution_cost;
+        return resolutionCost;
+    }
+
+    public void setResolutionCost(int resolutionCost)
+    {
+        this.resolutionCost = resolutionCost;
     }
     
     public Matrix[] permutation(Matrix[] m)

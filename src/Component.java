@@ -2,16 +2,17 @@ public class Component
 {
 	
     private String name;
-    private int total_usage;
+    private int totalUsage;
 
     public Component(String name) 
     {
         this.name = name;
-        this.total_usage = 0;
+        this.totalUsage = 0;
     }
-        
-    public void reset_total_usage(){
-        this.total_usage = 0;
+
+    public void resetTotalUsage()
+    {
+        this.totalUsage = 0;
     }
     
     /*
@@ -32,11 +33,11 @@ public class Component
 
     public int getTotalUsage() 
     {
-        return total_usage;
+        return totalUsage;
     }
 
-    public void setTotalUsage(int total_usage) 
+    public void setTotalUsage(int totalUsage)
     {
-        this.total_usage = total_usage;
+        this.totalUsage = totalUsage;
     }
 }

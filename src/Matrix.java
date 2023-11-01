@@ -1,8 +1,8 @@
 public class Matrix 
 {
 	
-    public int size;
-    public int[][] data;
+    private int size;
+    private int[][] data;
     
     public Matrix(int size, int[][] data) 
     {

@@ -3,15 +3,15 @@ import java.util.Map;
 public class Memory extends Component 
 {
 
-    private int set_cost;
-    private int get_cost;
+    private int setCost;
+    private int getGost;
     private Map<String,Matrix> data;
 
-    public Memory(String name, int set_cost, int get_cost,  Map<String, Matrix> data) 
+    public Memory(String name, int setCost, int getGost,  Map<String, Matrix> data)
     {
         super(name);
-        this.set_cost = set_cost;
-        this.get_cost = get_cost;
+        this.setCost = setCost;
+        this.getGost = getGost;
         this.data = data;
     }
     
@@ -32,22 +32,22 @@ public class Memory extends Component
     
     public int getGetCost() 
     {
-        return get_cost;
+        return getGost;
     }
 
-    public void setGetCost(int get_cost) 
+    public void setGetCost(int getGost)
     {
-        this.get_cost = get_cost;
+        this.getGost = getGost;
     }    
     
     public int getSetCost() 
     {
-        return set_cost;
+        return setCost;
     }
     
-    public void setSetCost(int set_cost) 
+    public void setSetCost(int setCost)
     {
-        this.set_cost = set_cost;
+        this.setCost = setCost;
     }
 
 }

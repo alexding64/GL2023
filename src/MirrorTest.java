@@ -1,8 +1,8 @@
 public class MirrorTest 
 {
 	
-    public String matrix;
-    public String result;
+    private String matrix;
+    private String result;
     
 
     public MirrorTest(String matrix, String result) 

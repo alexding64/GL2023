@@ -3,19 +3,21 @@ import java.util.Scanner;
 public class MonSuperSysteme 
 {
 	
-    public Computer computer;
-    public InputController inputController;
+    private Computer computer;
+    private InputController inputController;
 
     public void run() 
     {
         Scanner scanner = new Scanner(System.in);
         int choix = 0;
 
-        do {
+        do
+        {
             InputController.displayMainMenu();
             choix = InputController.getMainMenuChoice();
 
-            switch (choix) {
+            switch (choix)
+            {
                 case 1:
                 	InputController.displayCpuList();
                     break;
@@ -29,13 +31,14 @@ public class MonSuperSysteme
                 	InputController.displayTestPlanList();
                     break;
                 case 5:
-                    // Exécution
+                    /* Exécution */
                     Memory memory = InputController.getMemory();
                     Cpu cpu = InputController.getCpu();
                     OutputController outputController = InputController.getOutputController();
                     TestPlan testPlan = InputController.getTestPlan();
 
-                    if (memory != null && cpu != null && outputController != null && testPlan != null) {
+                    if (memory != null && cpu != null && outputController != null && testPlan != null)
+                    {
                         System.out.println("Work in progress...");
                         Computer computer = new Computer(memory, outputController, cpu, testPlan);
                         computer.exec();

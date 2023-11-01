@@ -3,11 +3,11 @@ import java.util.List;
 
 public class TestPlan 
 {
-	
-    public Map<String,Matrix> matrixes;
-    public Test[] tests;
 
-    public static TestPlan from_file(String filename)
+    private Map<String,Matrix> matrixes;
+    private Test[] tests;
+
+    public static TestPlan fromFile(String filename)
     {
         return new TestPlan();
     }

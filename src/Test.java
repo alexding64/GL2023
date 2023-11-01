@@ -1,11 +1,11 @@
 public class Test 
 {
-	
-    public String operation_name;
+
+    private String operationName;
     
-    public Test(String operation_name) 
+    public Test(String operationName)
     {
-        this.operation_name = operation_name;
+        this.operationName = operationName;
     }
 
     /**
@@ -14,11 +14,11 @@ public class Test
     
     public String getOperationName() 
     {
-        return operation_name;
+        return operationName;
     }
 
-    public void setOperationName(String operation_name) 
+    public void setOperationName(String operationName)
     {
-        this.operation_name = operation_name;
+        this.operationName = operationName;
     }
 }

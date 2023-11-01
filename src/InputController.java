@@ -49,9 +49,12 @@ public class InputController
         File[] files = folder.listFiles();
         int choice = 1;
 
-        if (files != null) {
-            for (File file : files) {
-                if (file.isFile() && file.getName().endsWith(".txt")) {
+        if (files != null)
+        {
+            for (File file : files)
+            {
+                if (file.isFile() && file.getName().endsWith(".txt"))
+                {
                     System.out.println(choice + ". " + file.getName().replace(".txt", ""));
                     choice++;
                 }
@@ -64,7 +67,8 @@ public class InputController
 
         int userChoice = getTestPlanChoice(choice); // Obtenez le choix de l'utilisateur
 
-        if (userChoice >= 1 && userChoice < choice) {
+        if (userChoice >= 1 && userChoice < choice)
+        {
             selectedTestPlan = files[userChoice - 1].getName().replace(".txt", "");
         }
     }
@@ -82,13 +86,17 @@ public class InputController
         File[] files = folder.listFiles();
         int choice = 1;
 
-        while (true) {
+        while (true)
+        {
             System.out.println("======== CPU_CHOICE ========\n");
             System.out.println("CPU disponibles : ");
 
-            if (files != null) {
-                for (File file : files) {
-                    if (file.isFile() && file.getName().endsWith(".txt")) {
+            if (files != null)
+            {
+                for (File file : files)
+                {
+                    if (file.isFile() && file.getName().endsWith(".txt"))
+                    {
                         System.out.println(choice + ". " + file.getName().replace(".txt", ""));
                         choice++;
                     }
@@ -101,12 +109,14 @@ public class InputController
 
             int userChoice = getCpuChoice(choice); // Obtenez le choix de l'utilisateur
 
-            if (userChoice >= 1 && userChoice < choice) {
+            if (userChoice >= 1 && userChoice < choice)
+            {
                 selectedCPU = files[userChoice - 1].getName().replace(".txt", "");
                 FileReader fileReader = new FileReader();
                 cpu = fileReader.getCpu("./configFiles/cpuList/" + files[userChoice - 1].getName());
                 break; // Sortez de la boucle si l'utilisateur a fait un choix valide
-            } else if (userChoice == 0) {
+            } else if (userChoice == 0)
+            {
                 break; // Sortez de la boucle si l'utilisateur choisit de quitter
             }
         }
@@ -126,9 +136,12 @@ public class InputController
         File[] files = folder.listFiles();
         int choice = 1;
 
-        if (files != null) {
-            for (File file : files) {
-                if (file.isFile() && file.getName().endsWith(".txt")) {
+        if (files != null)
+        {
+            for (File file : files)
+            {
+                if (file.isFile() && file.getName().endsWith(".txt"))
+                {
                     System.out.println(choice + ". " + file.getName().replace(".txt", ""));
                     choice++;
                 }
@@ -141,7 +154,8 @@ public class InputController
 
         int userChoice = getMemoryChoice(choice); // Obtenez le choix de l'utilisateur
 
-        if (userChoice >= 1 && userChoice < choice) {
+        if (userChoice >= 1 && userChoice < choice)
+        {
             selectedMemory = files[userChoice - 1].getName().replace(".txt", "");
             FileReader fileReader = new FileReader();
             memory = fileReader.getMemory("./configFiles/memoryList/" + files[userChoice - 1].getName());
@@ -162,9 +176,12 @@ public class InputController
         File[] files = folder.listFiles();
         int choice = 1;
 
-        if (files != null) {
-            for (File file : files) {
-                if (file.isFile() && file.getName().endsWith(".txt")) {
+        if (files != null)
+        {
+            for (File file : files)
+            {
+                if (file.isFile() && file.getName().endsWith(".txt"))
+                {
                     System.out.println(choice + ". " + file.getName().replace(".txt", ""));
                     choice++;
                 }
@@ -177,7 +194,8 @@ public class InputController
 
         int userChoice = getOutputCtrlChoice(choice); // Obtenez le choix de l'utilisateur
 
-        if (userChoice >= 1 && userChoice < choice) {
+        if (userChoice >= 1 && userChoice < choice)
+        {
             selectedController = files[userChoice - 1].getName().replace(".txt", "");
             FileReader fileReader = new FileReader();
             outputController = fileReader.getOutputController("./configFiles/outputList/" + files[userChoice - 1].getName());
@@ -200,11 +218,14 @@ public class InputController
         Scanner scanner = new Scanner(System.in);
         int choice = -1;
 
-        while (true) {
+        while (true)
+        {
             System.out.print("Votre choix : ");
-            if (scanner.hasNextInt()) {
+            if (scanner.hasNextInt())
+            {
                 choice = scanner.nextInt();
-                if (choice >= 0 && choice <= maxChoice) {
+                if (choice >= 0 && choice <= maxChoice)
+                {
                     break; // Sort de la boucle si le choix est valide
                 } else {
                     System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
@@ -224,9 +245,11 @@ public class InputController
 
         while (true) {
             System.out.print("Votre choix : ");
-            if (scanner.hasNextInt()) {
+            if (scanner.hasNextInt())
+            {
                 choice = scanner.nextInt();
-                if (choice >= 0 && choice <= maxChoice) {
+                if (choice >= 0 && choice <= maxChoice)
+                {
                     break; // Sort de la boucle si le choix est valide
                 } else {
                     System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
@@ -245,11 +268,14 @@ public class InputController
         Scanner scanner = new Scanner(System.in);
         int choice = -1;
 
-        while (true) {
+        while (true)
+        {
             System.out.print("Votre choix : ");
-            if (scanner.hasNextInt()) {
+            if (scanner.hasNextInt())
+            {
                 choice = scanner.nextInt();
-                if (choice >= 0 && choice <= maxChoice) {
+                if (choice >= 0 && choice <= maxChoice)
+                {
                     break; // Sort de la boucle si le choix est valide
                 } else {
                     System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
@@ -268,11 +294,14 @@ public class InputController
         Scanner scanner = new Scanner(System.in);
         int choice = -1;
 
-        while (true) {
+        while (true)
+        {
             System.out.print("Votre choix : ");
-            if (scanner.hasNextInt()) {
+            if (scanner.hasNextInt())
+            {
                 choice = scanner.nextInt();
-                if (choice >= 0 && choice <= maxChoice) {
+                if (choice >= 0 && choice <= maxChoice)
+                {
                     break; // Sort de la boucle si le choix est valide
                 } else {
                     System.out.println("Choix invalide. Veuillez sélectionner une option valide.");

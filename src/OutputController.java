@@ -1,11 +1,11 @@
 public class OutputController extends Component 
 {
 	
-    private int log_cost;
+    private int logCost;
 
-    public OutputController(String name, int log_cost) {
+    public OutputController(String name, int logCost) {
         super(name);
-        this.log_cost = log_cost;
+        this.logCost = logCost;
     }
 
     public void log(Object msg) 
@@ -13,7 +13,7 @@ public class OutputController extends Component
     	
     }
 
-    public void log_free(Object msg)
+    public void logFree(Object msg)
     {
     	
     }

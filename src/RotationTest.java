@@ -1,8 +1,8 @@
 public class RotationTest 
 {
 	
-    public String matrix;
-    public String result;
+    private String matrix;
+    private String result;
     
     public RotationTest(String matrix, String result) 
     {

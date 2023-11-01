@@ -1,7 +1,7 @@
 public class AdditionTest extends Test
 {
 	
-    public String matrix;
+    private String matrix;
     
     public AdditionTest(String name, String matrix) 
     {
