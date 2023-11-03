@@ -1,0 +1,17 @@
+{
+    "matrixes": {
+        "Matrice1": {
+            "size": 2,
+            "data": [
+                [ 6,  8],
+                [ 7,  2]
+            ]
+        }
+    },
+    "operations": [
+        {
+            "name": "scalar_addition",
+            "src": "Matrice1"
+        }
+    ]
+}

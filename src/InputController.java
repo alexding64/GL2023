@@ -408,9 +408,4 @@ public class InputController
     {
         return testPlan;
     }
-
-    public static void clearConsole()
-    {
-
-    }
 }
