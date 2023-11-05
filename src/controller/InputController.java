@@ -1,3 +1,7 @@
+package controller;
+
+import model.*;
+
 import java.util.Scanner;
 import java.io.File;
 
@@ -11,14 +15,14 @@ public class InputController
     private static String selectedTestPlan = "Aucun";
 
     private static Cpu cpu;
-    private static Memory memory;    
+    private static Memory memory;
     private static OutputController outputController;
     private static TestPlan testPlan;
 
     private static String cpuPath = "./configFiles/cpuList";
     private static String memoryPath = "./configFiles/memoryList";
     private static String outputPath = "./configFiles/outputList";
-    private static String testplanPath = "./configFiles/testplanPath";
+    private static String testplanPath = "./configFiles/testPlanList";
 
     /*
      * Main menu display with component list display
@@ -40,7 +44,7 @@ public class InputController
 	    }
 	    System.out.println("");
 	    
-	    System.out.print("Memory : ");
+	    System.out.print("Mémoire : ");
 	    if ("Aucun".equals(selectedMemory)) {
 	        // Afficher en rouge
 	        System.out.print("\u001B[31m" + selectedMemory + "\u001B[0m"); // Code ANSI pour rouge
@@ -163,7 +167,7 @@ public class InputController
 
     
     /*
-     * Memory Composants list display 
+     * model.Memory Composants list display
      * The user will choose his controller that he wants
      * @author Aurélien Paquet
      * @version 1.0
@@ -374,7 +378,7 @@ public class InputController
     }
 
     /**
-     * Cpu getter
+     * model.Cpu getter
      * @return cpu
      */
     public static Cpu getCpu()
@@ -383,7 +387,7 @@ public class InputController
     }
 
     /**
-     * Memory getter
+     * model.Memory getter
      * @return memory
      */
     public static Memory getMemory()
@@ -401,7 +405,7 @@ public class InputController
     }
 
     /**
-     * TestPlan Getter
+     * model.TestPlan Getter
      * @return testPlan
      */
     public static TestPlan getTestPlan()

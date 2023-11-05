@@ -1,6 +1,8 @@
-import java.util.List;
+package model;
 
-public class Cpu extends Component 
+import model.Component;
+
+public class Cpu extends Component
 {
 	
     private int permutationCost;
@@ -16,7 +18,7 @@ public class Cpu extends Component
     }
       
     /**
-     * Method to permute a 2x2 Matrix
+     * Method to permute a 2x2 model.Matrix
      * @param m is the matrix to be permuted
      * @return m the permuted matrix
      */
@@ -40,7 +42,7 @@ public class Cpu extends Component
     }
 
     /**
-     * Method to rotate a 2x2 Matrix
+     * Method to rotate a 2x2 model.Matrix
      * @param m is the matrix to be rotated
      * @return m the rotated matrix
      */
@@ -62,7 +64,7 @@ public class Cpu extends Component
     }
 
     /**
-     * Method to resolve a 2x2 Matrix
+     * Method to resolve a 2x2 model.Matrix
      * @param m is the matrix to be resolved
      * @return m the resolved matrix
      */
@@ -87,32 +89,56 @@ public class Cpu extends Component
     /**
      * GETTER & SETTER
      */
-    
+
+    /**
+     * Getter of permutationCost
+     * @return permutationCost
+     */
     public int getPermutationCost() 
     {
         return permutationCost;
     }
 
+    /**
+     * Setter of permutationCost
+     * @param permutationCost
+     */
     public void setPermutationCost(int permutationCost)
     {
         this.permutationCost = permutationCost;
     }
 
+    /**
+     * Getter of rotationCost
+     * @return rotationCost
+     */
     public int getRotationCost() 
     {
         return rotationCost;
     }
 
+    /**
+     * Setter of rotationCost
+     * @param rotationCost
+     */
     public void setRotationCost(int rotationCost)
     {
         this.rotationCost = rotationCost;
     }
 
+    /**
+     * Getter of resolutionCost
+     * @return resolutionCost
+     */
     public int getResolutionCost()
     {
         return resolutionCost;
     }
 
+    /**
+     * Setter of resolutionCost
+     * @param resolutionCost
+     */
     public void setResolutionCost(int resolutionCost)
     {
         this.resolutionCost = resolutionCost;

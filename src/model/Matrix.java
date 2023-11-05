@@ -1,3 +1,5 @@
+package model;
+
 import java.util.Random;
 
 public class Matrix 
@@ -5,7 +7,12 @@ public class Matrix
 	
     private int size;
     private int[][] data;
-    
+
+    /**
+     * Constructor of MAtrix class
+     * @param size
+     * @param data
+     */
     public Matrix(int size, int[][] data) 
     {
     	this.size = size;

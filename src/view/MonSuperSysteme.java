@@ -1,3 +1,8 @@
+package view;
+
+import controller.InputController;
+import model.*;
+
 import java.util.Scanner;
 
 public class MonSuperSysteme 
@@ -6,6 +11,9 @@ public class MonSuperSysteme
     private Computer computer;
     private InputController inputController;
 
+    /**
+     * Launch the system
+     */
     public void run() 
     {
         Scanner scanner = new Scanner(System.in);
@@ -41,7 +49,7 @@ public class MonSuperSysteme
                     {
                         System.out.println("Work in progress...");
                         Computer computer = new Computer(memory, outputController, cpu, testPlan);
-                        computer.exec();
+                        computer.exec(); // Plan test execution
                     }
                     break;
                 case 6:

@@ -1,6 +1,9 @@
+package model;
+
+import model.Cpu;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,6 +16,11 @@ public class FileReader
         return new String['0'];
     }
 
+    /**
+     * Give the list of CPU available in the directoryPath
+     * @param directoryPath
+     * @return the cpu list in table of String
+     */
     public String[] getCpuList(String directoryPath)
     {
         File folder = new File(directoryPath);
@@ -33,6 +41,11 @@ public class FileReader
         return cpuNames.toArray(new String[0]);
     }
 
+    /**
+     * Give the list of memory available in the directoryPath
+     * @param directoryPath
+     * @return the memory list in table of String
+     */
     public String[] getMemoryList(String directoryPath)
     {
         File folder = new File(directoryPath);
@@ -53,6 +66,11 @@ public class FileReader
         return memoryNames.toArray(new String[0]);
     }
 
+    /**
+     * Give the list of output available in the directoryPath
+     * @param directoryPath
+     * @return the output list in table of String
+     */
     public String[] getOutputCtrlList(String directoryPath)
     {
         File folder = new File(directoryPath);
@@ -73,6 +91,11 @@ public class FileReader
         return outputNames.toArray(new String[0]);
     }
 
+    /**
+     * Create a CPU with values in the file path
+     * @param path
+     * @return the cpu created
+     */
     public Cpu getCpu(String path)
     {
         File item = new File(path);
@@ -82,6 +105,11 @@ public class FileReader
                 Integer.parseInt(parametersList.get(1)), Integer.parseInt(parametersList.get(2)));
     }
 
+    /**
+     * Create a Memory with values in the file path
+     * @param path
+     * @return the memory created
+     */
     public Memory getMemory(String path)
     {
         File item = new File(path);
@@ -91,6 +119,11 @@ public class FileReader
                 Integer.parseInt(parametersList.get(1)), new HashMap<String, Matrix>());
     }
 
+    /**
+     * Create an output with values in the file path
+     * @param path
+     * @return the output created
+     */
     public OutputController getOutputController(String path)
     {
         File item = new File(path);
@@ -99,6 +132,11 @@ public class FileReader
         return new OutputController(fileName[fileName.length-1], Integer.parseInt(parametersList.get(0)));
     }
 
+    /**
+     * Method to extract values in a text file
+     * @param file
+     * @return values extracted in a table of String
+     */
     private static List<String> getValuesFromFile(File file) {
         List<String> values = new ArrayList<>();
         Scanner myReader = null;

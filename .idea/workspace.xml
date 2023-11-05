@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Correction liste TestPlan&#10;Ajout structure Execution">
+    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Remise norme conventions &lt;&lt;longueur de lignes&gt;&gt;">
+      <change afterPath="$PROJECT_DIR$/src/model/Computer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdditionNTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AdditionNTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdditionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AdditionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Computer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MirrorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MirrorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MonSuperSysteme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MonSuperSysteme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OutputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/OutputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RotationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TestPlan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +37,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "celianpth"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;celianpth&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -49,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/celia/Documents/Polytech/UQAC/T1/GenieLogiciel/Projet/ProjetGL2023",
+    "last_opened_file_path": "C:/Users/celia/Documents/Polytech/UQAC/T1/GenieLogiciel/Projet/DEV1_V2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,6 +77,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\celia\Documents\Polytech\UQAC\T1\GenieLogiciel\Projet\ProjetGL2023\src" />
       <recent name="C:\Users\celia\Documents\Polytech\UQAC\T1\GenieLogiciel\Projet\ProjetGL2023\configFiles" />
     </key>
   </component>
@@ -88,7 +106,8 @@
       <workItem from="1697475959545" duration="1000" />
       <workItem from="1698248574623" duration="497000" />
       <workItem from="1698419989830" duration="11095000" />
-      <workItem from="1698863440716" duration="306000" />
+      <workItem from="1698863440716" duration="1763000" />
+      <workItem from="1699195943720" duration="5639000" />
     </task>
     <task id="LOCAL-00001" summary="Compilation + Rectification menu">
       <option name="closed" value="true" />
@@ -122,17 +141,37 @@
       <option name="project" value="LOCAL" />
       <updated>1698592389631</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Remise norme conventions &lt;&lt;longueur de lignes&gt;&gt;">
+      <option name="closed" value="true" />
+      <created>1698863985482</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698863985482</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Compilation + Rectification menu" />
     <MESSAGE value="Changement structure dossier config&#10;Ajout attributs dans fichiers txt" />
     <MESSAGE value="création des composants apres choix" />
     <MESSAGE value="Correction liste TestPlan&#10;Ajout structure Execution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction liste TestPlan&#10;Ajout structure Execution" />
+    <MESSAGE value="Remise norme conventions &lt;&lt;longueur de lignes&gt;&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remise norme conventions &lt;&lt;longueur de lignes&gt;&gt;" />
   </component>
 </project>
