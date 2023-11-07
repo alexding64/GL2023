@@ -95,40 +95,40 @@ public class oui {
                 	        System.out.println("Générez d'abord une matrice.");
                 	    }
                      break;
-                 case 4:
-                     if (matrixSize == 2) {
-                         // Matrice de 2x2, appliquez directement les opérations
-                         Matrix permutatedMatrix = Cpu.permutation(matrix);
-
+                 case 4: // Permutation
+                     Matrix permutatedMatrix = Cpu.permutation(matrix);
+//                     if (matrixSize == 2) {
+//                         // Matrice de 2x2, appliquez directement les opérations
+//                         Matrix permutatedMatrix = Cpu.permutation(matrix);
+//
+//                         System.out.println("Matrice permutée :");
+//                         Matrix.printMatrix(permutatedMatrix);
+//
+//                     } else {
+//                         // Matrice plus grande, divisez-la en sous-matrices, appliquez les opérations, puis réassemblez
+//                         int subMatrixSize = 2;
+//                         Matrix newMatrix = matrix;
+//                         for (int i = 0; i < matrixSize; i += subMatrixSize) {
+//                             for (int j = 0; j < matrixSize; j += subMatrixSize) {
+//                                 int[][] subMatrixData = getSubMatrix(matrix.getData(), i, j, subMatrixSize);
+//                                 Matrix subMatrix = new Matrix(subMatrixSize, subMatrixData);
+//
+//                                 System.out.println("Sous-matrice (" + i + ", " + j + ") :");
+//                                 Matrix.printMatrix(subMatrix);
+//
+//                                 // Appliquer l'opération sur la sous-matrice
+//                                 Matrix permutatedSubMatrix = Cpu.permutation(subMatrix);
+//                                 System.out.println("Sous-matrice permutée :");
+//                                 Matrix.printMatrix(permutatedSubMatrix);
+//
+//                                 // Réassembler la sous-matrice dans la matrice d'origine
+//                                 updateMatrix(matrix, permutatedSubMatrix, i, subMatrixSize - j);
+//                             }
+//                         }
 
                          System.out.println("Matrice permutée :");
                          Matrix.printMatrix(permutatedMatrix);
-
-                     } else {
-                         // Matrice plus grande, divisez-la en sous-matrices, appliquez les opérations, puis réassemblez
-                         int subMatrixSize = 2;
-                         Matrix newMatrix = matrix;
-                         for (int i = 0; i < matrixSize; i += subMatrixSize) {
-                             for (int j = 0; j < matrixSize; j += subMatrixSize) {
-                                 int[][] subMatrixData = getSubMatrix(matrix.getData(), i, j, subMatrixSize);
-                                 Matrix subMatrix = new Matrix(subMatrixSize, subMatrixData);
-
-                                 System.out.println("Sous-matrice (" + i + ", " + j + ") :");
-                                 Matrix.printMatrix(subMatrix);
-
-                                 // Appliquer l'opération sur la sous-matrice
-                                 Matrix permutatedSubMatrix = Cpu.permutation(subMatrix);
-                                 System.out.println("Sous-matrice permutée :");
-                                 Matrix.printMatrix(permutatedSubMatrix);
-
-                                 // Réassembler la sous-matrice dans la matrice d'origine
-                                 updateMatrix(matrix, permutatedSubMatrix, i, subMatrixSize - j);
-                             }
-                         }
-
-                         System.out.println("Matrice permutée :");
-                         Matrix.printMatrix(matrix);
-                     }
+//                     }
                      break;
                  case 5:
                      System.out.println("Au revoir !");
