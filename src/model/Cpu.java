@@ -22,7 +22,7 @@ public class Cpu extends Component
      * @param m is the matrix to be permuted
      * @return m the permuted matrix
      */
-    public Matrix permutation(Matrix m) 
+    public static Matrix permutation(Matrix m) 
     {
         int[][] data = m.getData();
         if (m.getSize() != 2) {
@@ -46,7 +46,7 @@ public class Cpu extends Component
      * @param m is the matrix to be rotated
      * @return m the rotated matrix
      */
-    public Matrix rotation(Matrix matrix) 
+    public static Matrix rotation(Matrix matrix) 
     {
         int[][] data = matrix.getData();
         if (matrix.getSize() != 2) {
@@ -68,7 +68,7 @@ public class Cpu extends Component
      * @param m is the matrix to be resolved
      * @return m the resolved matrix
      */
-    public int resolution(Matrix m)
+    public static int resolution(Matrix m)
     {
         int totalSum = 0;
         
