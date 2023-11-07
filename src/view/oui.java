@@ -65,70 +65,25 @@ public class oui {
                 	        System.out.println("Générez d'abord une matrice.");
                 	    }
                 	    break;
-                 case 3:
-                	    if (matrix != null) {
-                	        if (matrix.getSize() == 2) {
-                	            // Matrice 2x2 : Appliquer la rotation directement
-                	            Matrix rotatedMatrix = Cpu.rotation(matrix);
-                	            System.out.println("Matrice pivotée :");
-                	            Matrix.printMatrix(rotatedMatrix);
-                	        } else {
-                	            // Matrice plus grande : Divisez-la en sous-matrices, appliquez la rotation et réassemblez correctement
-                	            int subMatrixSize = 2;
-                	            for (int i = 0; i < matrixSize; i += subMatrixSize) {
-                	                for (int j = 0; j < matrixSize; j += subMatrixSize) {
-                	                    int[][] subMatrixData = getSubMatrix(matrix.getData(), i, j, subMatrixSize);
-                	                    Matrix subMatrix = new Matrix(subMatrixSize, subMatrixData);
-
-                	                    // Appliquer la rotation sur la sous-matrice
-                	                    Matrix rotatedSubMatrix = Cpu.rotation(subMatrix);
-
-                	                    // Réassembler la sous-matrice dans la matrice d'origine
-                	                    updateMatrix(matrix, rotatedSubMatrix, i, j);
-                	                }
-                	            }
-
-                	            System.out.println("Matrice pivotée :");
-                	            Matrix.printMatrix(matrix);
-                	        }
-                	    } else {
-                	        System.out.println("Générez d'abord une matrice.");
-                	    }
+                 case 3: // Rotation
+                     if (matrix != null) {
+                         Matrix rotatedMatrix = Cpu.rotation(matrix);
+                         System.out.println("Rotated matrix :");
+                         Matrix.printMatrix(rotatedMatrix);
+                     }
+                     else {
+                         System.out.println("Générez d'abord une matrice.");
+                     }
                      break;
                  case 4: // Permutation
-                     Matrix permutatedMatrix = Cpu.permutation(matrix);
-//                     if (matrixSize == 2) {
-//                         // Matrice de 2x2, appliquez directement les opérations
-//                         Matrix permutatedMatrix = Cpu.permutation(matrix);
-//
-//                         System.out.println("Matrice permutée :");
-//                         Matrix.printMatrix(permutatedMatrix);
-//
-//                     } else {
-//                         // Matrice plus grande, divisez-la en sous-matrices, appliquez les opérations, puis réassemblez
-//                         int subMatrixSize = 2;
-//                         Matrix newMatrix = matrix;
-//                         for (int i = 0; i < matrixSize; i += subMatrixSize) {
-//                             for (int j = 0; j < matrixSize; j += subMatrixSize) {
-//                                 int[][] subMatrixData = getSubMatrix(matrix.getData(), i, j, subMatrixSize);
-//                                 Matrix subMatrix = new Matrix(subMatrixSize, subMatrixData);
-//
-//                                 System.out.println("Sous-matrice (" + i + ", " + j + ") :");
-//                                 Matrix.printMatrix(subMatrix);
-//
-//                                 // Appliquer l'opération sur la sous-matrice
-//                                 Matrix permutatedSubMatrix = Cpu.permutation(subMatrix);
-//                                 System.out.println("Sous-matrice permutée :");
-//                                 Matrix.printMatrix(permutatedSubMatrix);
-//
-//                                 // Réassembler la sous-matrice dans la matrice d'origine
-//                                 updateMatrix(matrix, permutatedSubMatrix, i, subMatrixSize - j);
-//                             }
-//                         }
-
+                     if (matrix != null) {
+                         Matrix permutatedMatrix = Cpu.permutation(matrix);
                          System.out.println("Matrice permutée :");
                          Matrix.printMatrix(permutatedMatrix);
-//                     }
+                     }
+                     else {
+                         System.out.println("Générez d'abord une matrice.");
+                     }
                      break;
                  case 5:
                      System.out.println("Au revoir !");

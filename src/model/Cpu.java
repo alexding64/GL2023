@@ -90,18 +90,59 @@ public class Cpu extends Component
     public static Matrix rotation(Matrix matrix) 
     {
         int[][] data = matrix.getData();
-        if (matrix.getSize() != 2) {
-            throw new IllegalArgumentException("La matrice doit être de taille 2x2 pour la rotation.");
+        int size = matrix.getSize();
+
+        if (size%2 != 0) {
+            throw new IllegalArgumentException("La matrice doit être de taille (2^n)*(2^n), n entier >= 1 pour la permutation.");
         }
 
-        // Effectuer la rotation
-        int temp = data[0][0];
-        data[0][0] = data[1][0];
-        data[1][0] = data[1][1];
-        data[1][1] = data[0][1];
-        data[0][1] = temp;
+        if (size == 2) {
+            // Effectuer la rotation
+            int temp = data[0][0];
+            data[0][0] = data[1][0];
+            data[1][0] = data[1][1];
+            data[1][1] = data[0][1];
+            data[0][1] = temp;
 
-        return matrix; // Retourner la matrice modifiée
+            return matrix; // Retourner la matrice modifiée
+        }
+        else {
+            int[][] dataTl = new int[size/2][size/2];
+            int[][] dataBl = new int[size/2][size/2];
+            int[][] dataTr = new int[size/2][size/2];
+            int[][] dataBr = new int[size/2][size/2];
+
+            for (int i = 0; i < size/2; i++) {
+                for (int j = 0; j < size/2; j++) {
+                    dataTl[i][j] = data[i][j];
+                    dataBl[i][j] = data[i+size/2][j];
+                    dataTr[i][j] = data[i][j+size/2];
+                    dataBr[i][j] = data[i+size/2][j+size/2];
+                }
+            }
+            Matrix tl = new Matrix(size/2, dataTl);
+            Matrix bl = new Matrix(size/2, dataBl);
+            Matrix tr = new Matrix(size/2, dataTr);
+            Matrix br = new Matrix(size/2, dataBr);
+
+            tl = rotation(tl);
+            bl = rotation(bl);
+            tr = rotation(tr);
+            br = rotation(br);
+
+            int[][] finalData = new int[size][size];
+            for (int i = 0; i < size/2; i++) {
+                for (int j = 0; j < size/2; j++) {
+                    finalData[i][j] = bl.getData()[i][j];
+                    finalData[i][j+size/2] = tl.getData()[i][j];
+                    finalData[i+size/2][j] = br.getData()[i][j];
+                    finalData[i+size/2][j+size/2] = tr.getData()[i][j];
+
+                }
+            }
+
+            return new Matrix(size, finalData);
+        }
     }
 
     /**
