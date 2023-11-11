@@ -15,10 +15,10 @@ public class Computer
 
     /**
      * Constructor of Computer class
-     * @param memory
-     * @param outputController
-     * @param cpu
-     * @param testPlan
+     * @param memory of the computer
+     * @param outputController of the computer
+     * @param cpu of the computer
+     * @param testPlan of the computer
      */
     public Computer(Memory memory, OutputController outputController, Cpu cpu, TestPlan testPlan)
     {
@@ -34,7 +34,8 @@ public class Computer
     public void exec()
     {
     	initMemory(testPlan.getMatrices());
-        for (Test test : testPlan.getTests()) {
+        for (Test test : testPlan.getTests())
+        {
             int cost = execTest(test);
             outputController.log("Coût du test : " + cost);
         }
@@ -46,7 +47,7 @@ public class Computer
 
     /**
      * Setter of cpu
-     * @param cpu
+     * @param cpu of the computer
      */
     public void setCpu(Cpu cpu)
     {
@@ -55,7 +56,7 @@ public class Computer
 
     /**
      * Setter of memory
-     * @param memory
+     * @param memory of the computer
      */
     public void setMemory(Memory memory)
     {
@@ -64,7 +65,7 @@ public class Computer
 
     /**
      * Setter of outputController
-     * @param outputController
+     * @param outputController of the computer
      */
     public void setOutputController(OutputController outputController)
     {
@@ -73,7 +74,7 @@ public class Computer
 
     /**
      * Setter of testPlan
-     * @param testPlan
+     * @param testPlan chosen
      */
     public void setTestPlan(TestPlan testPlan)
     {
@@ -82,12 +83,13 @@ public class Computer
 
     /**
      * Load matrices in the memory
-     * @param mat
+     * @param mat the matrices we want to use
      * @return true if the memory is initialized
      */
     private boolean initMemory(Map<String, Matrix> mat)
     {
-        for (Map.Entry<String, Matrix> entry : mat.entrySet()) {
+        for (Map.Entry<String, Matrix> entry : mat.entrySet())
+        {
             String address = entry.getKey();
             Matrix matrix = entry.getValue();
             memory.set(address, matrix);
@@ -97,13 +99,14 @@ public class Computer
 
     /**
      * Launch a test
-     * @param test
+     * @param test to launch
      * @return cost
      */
     private int execTest(Test test)
     {
         int cost = 0;
-        switch (test.getOperationName()) {
+        switch (test.getOperationName())
+        {
             case "Addition" :
                 cost = scalarAddition(((AdditionTest)test).getMatrix());
                 break;
@@ -124,13 +127,14 @@ public class Computer
 
     /**
      * Execute a scalar addition with the source matrix
-     * @param src
+     * @param src the address of the source matrix
      * @return cost
      */
     private int scalarAddition(String src)
     {
         Matrix matrix = memory.get(src);
-        if (matrix.getSize() == 2) {
+        if (matrix.getSize() == 2)
+        {
             return cpu.resolution(matrix);
         }
         //TODO
@@ -139,9 +143,9 @@ public class Computer
 
     /**
      * Execute an addition of two matrices and put the result in the map at dest
-     * @param mat1
-     * @param mat2
-     * @param dest
+     * @param mat1 the address of the first matrix
+     * @param mat2 the address of the second matrix
+     * @param dest the address of the result matrix
      * @return cost
      */
     private int scalarNAddition(String mat1, String mat2, String dest)
@@ -151,8 +155,8 @@ public class Computer
 
     /**
      * Execute a rotation and put the result in the map at dest
-     * @param src
-     * @param dest
+     * @param src the address of the source matrix
+     * @param dest the address pf the destination matrix
      * @return
      */
     private int rotation(String src, String dest)
@@ -167,8 +171,8 @@ public class Computer
 
     /**
      * Execute a mirror and put the result int the map at dest
-     * @param src
-     * @param dest
+     * @param src the address of the source matrix
+     * @param dest the address of the destination matrix
      * @return
      */
     private int mirror(String src, String dest)

@@ -14,10 +14,10 @@ public class Memory extends Component
 
     /**
      * Constructor of Memory class
-     * @param name
-     * @param setCost
-     * @param getCost
-     * @param data
+     * @param name the memory name
+     * @param setCost the cost for setting data
+     * @param getCost the cost for getting data
+     * @param data the matrices
      */
     public Memory(String name, int setCost, int getCost,  Map<String, Matrix> data)
     {
@@ -29,8 +29,8 @@ public class Memory extends Component
 
     /**
      * Add a matrix in the map
-     * @param address
-     * @param mat
+     * @param address in the map
+     * @param mat the matrix
      */
     public void set(String address, Matrix mat)
     {
@@ -39,8 +39,8 @@ public class Memory extends Component
 
     /**
      * Get a matrix from its address
-     * @param address
-     * @return
+     * @param address in the map
+     * @return the matrix founded
      */
     public Matrix get(String address)
     {
@@ -54,7 +54,7 @@ public class Memory extends Component
 
     /**
      * Getter of getCost
-     * @return getCost
+     * @return getCost cost of getting
      */
     public int getGetCost() 
     {
@@ -63,7 +63,7 @@ public class Memory extends Component
 
     /**
      * Setter of getCost
-     * @param getCost
+     * @param getCost cost of getting
      */
     public void setGetCost(int getCost)
     {
@@ -72,7 +72,7 @@ public class Memory extends Component
 
     /**
      * Getter of setCost
-     * @return setCost
+     * @return setCost cost of setting
      */
     public int getSetCost() 
     {
@@ -81,7 +81,7 @@ public class Memory extends Component
 
     /**
      * Setter of setCost
-     * @param setCost
+     * @param setCost cost of setting
      */
     public void setSetCost(int setCost)
     {

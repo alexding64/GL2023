@@ -11,6 +11,10 @@ import java.util.Scanner;
 
 public class FileReader
 {
+    /**
+     * Get the list of test plans
+     * @return the list of test plans
+     */
     public String[] getTestPlanList()
     {
         return new String['0'];
@@ -18,10 +22,10 @@ public class FileReader
 
     /**
      * Give the list of CPU available in the directoryPath
-     * @param directoryPath
+     * @param directoryPath the directory path
      * @return the cpu list in table of String
      */
-    public String[] getCpuList(String directoryPath)
+    public String[] getCpuList(String directoryPath) throws FileNotFoundException
     {
         File folder = new File(directoryPath);
         File[] files = folder.listFiles();
@@ -36,6 +40,9 @@ public class FileReader
                     cpuNames.add(file.getName().replace(".txt", ""));
                 }
             }
+        } else
+        {
+            throw new FileNotFoundException("Le fichier n'a pas été trouvé");
         }
 
         return cpuNames.toArray(new String[0]);
@@ -43,10 +50,10 @@ public class FileReader
 
     /**
      * Give the list of memory available in the directoryPath
-     * @param directoryPath
+     * @param directoryPath the directory path
      * @return the memory list in table of String
      */
-    public String[] getMemoryList(String directoryPath)
+    public String[] getMemoryList(String directoryPath) throws FileNotFoundException
     {
         File folder = new File(directoryPath);
         File[] files = folder.listFiles();
@@ -61,6 +68,9 @@ public class FileReader
                 	memoryNames.add(file.getName().replace(".txt", ""));
                 }
             }
+        } else
+        {
+            throw new FileNotFoundException("Le fichier n'a pas été trouvé");
         }
 
         return memoryNames.toArray(new String[0]);
@@ -68,10 +78,10 @@ public class FileReader
 
     /**
      * Give the list of output available in the directoryPath
-     * @param directoryPath
+     * @param directoryPath the directory path
      * @return the output list in table of String
      */
-    public String[] getOutputCtrlList(String directoryPath)
+    public String[] getOutputCtrlList(String directoryPath) throws FileNotFoundException
     {
         File folder = new File(directoryPath);
         File[] files = folder.listFiles();
@@ -86,6 +96,9 @@ public class FileReader
                 	outputNames.add(file.getName().replace(".txt", ""));
                 }
             }
+        } else
+        {
+            throw new FileNotFoundException("Le fichier n'a pas été trouvé");
         }
 
         return outputNames.toArray(new String[0]);
@@ -93,7 +106,7 @@ public class FileReader
 
     /**
      * Create a CPU with values in the file path
-     * @param path
+     * @param path of the file chosen
      * @return the cpu created
      */
     public Cpu getCpu(String path)
@@ -107,7 +120,7 @@ public class FileReader
 
     /**
      * Create a Memory with values in the file path
-     * @param path
+     * @param path of the file chosen
      * @return the memory created
      */
     public Memory getMemory(String path)
@@ -121,7 +134,7 @@ public class FileReader
 
     /**
      * Create an output with values in the file path
-     * @param path
+     * @param path of the file chosen
      * @return the output created
      */
     public OutputController getOutputController(String path)
@@ -129,28 +142,33 @@ public class FileReader
         File item = new File(path);
         List<String> parametersList = getValuesFromFile(item);
         String[] fileName = path.split("/");
-        return new OutputController(fileName[fileName.length-1], Integer.parseInt(parametersList.get(0)));
+        return new OutputController(fileName[fileName.length-1],
+                Integer.parseInt(parametersList.get(0)));
     }
 
     /**
      * Method to extract values in a text file
-     * @param file
+     * @param file the file with values to extract
      * @return values extracted in a table of String
      */
-    private static List<String> getValuesFromFile(File file) {
+    private static List<String> getValuesFromFile(File file)
+    {
         List<String> values = new ArrayList<>();
         Scanner myReader = null;
-        try {
+        try
+        {
             myReader = new Scanner(file);
             while (myReader.hasNextLine()) {
                 String[] line = myReader.nextLine().split("=");
-                if (line.length == 2) {
+                if (line.length == 2)
+                {
                     String value = line[1];
                     values.add(value);
                 }
             }
             myReader.close();
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e)
+        {
             throw new RuntimeException(e);
         }
         return values;

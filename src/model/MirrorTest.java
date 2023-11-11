@@ -9,8 +9,8 @@ public class MirrorTest extends Test
 
 	/**
 	 * Constructor of MirrorTest class
-	 * @param matrix
-	 * @param result
+	 * @param matrix the address of the matrix
+	 * @param result the address of the result matrix
 	 */
 	public MirrorTest(String matrix, String result)
     {
@@ -42,7 +42,7 @@ public class MirrorTest extends Test
 
 	/**
 	 * Getter of result
-	 * @return result
+	 * @return result the address of the result matrix
 	 */
 	public String getResult() 
 	{
@@ -51,7 +51,7 @@ public class MirrorTest extends Test
 
 	/**
 	 * Setter of result
-	 * @param result
+	 * @param result the address of the result matrix
 	 */
 	public void setResult(String result) 
 	{

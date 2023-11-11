@@ -27,12 +27,15 @@ public class Cpu extends Component
         int[][] data = m.getData();
         int size = m.getSize();
 
-        if (size%2 != 0) {
-            throw new IllegalArgumentException("La matrice doit être de taille (2^n)*(2^n), n entier >= 1 pour la permutation.");
+        if (size%2 != 0)
+        {
+            throw new IllegalArgumentException("La matrice doit être de taille (2^n)*(2^n)," +
+                    " n entier >= 1 pour la permutation.");
         }
 
-        if (size == 2) {
-            // Effectuer la permutation (effet miroir)
+        if (size == 2)
+        {
+            /* Do the permutation action */
             int temp = data[0][1];
             data[0][1] = data[0][0];
             data[0][0] = temp;
@@ -40,16 +43,19 @@ public class Cpu extends Component
             temp = data[1][1];
             data[1][1] = data[1][0];
             data[1][0] = temp;
-            return m; // Retourner la matrice permutée
+            return m; // return the permuted matrix
         }
-        else {
+        else
+        {
             int[][] dataTl = new int[size/2][size/2];
             int[][] dataBl = new int[size/2][size/2];
             int[][] dataTr = new int[size/2][size/2];
             int[][] dataBr = new int[size/2][size/2];
 
-            for (int i = 0; i < size/2; i++) {
-                for (int j = 0; j < size/2; j++) {
+            for (int i = 0; i < size/2; i++)
+            {
+                for (int j = 0; j < size/2; j++)
+                {
                     dataTl[i][j] = data[i][j];
                     dataBl[i][j] = data[i+size/2][j];
                     dataTr[i][j] = data[i][j+size/2];
@@ -67,8 +73,10 @@ public class Cpu extends Component
             br = permutation(br);
 
             int[][] finalData = new int[size][size];
-            for (int i = 0; i < size/2; i++) {
-                for (int j = 0; j < size/2; j++) {
+            for (int i = 0; i < size/2; i++)
+            {
+                for (int j = 0; j < size/2; j++)
+                {
                     finalData[i][j] = tr.getData()[i][j];
                     finalData[i][j+size/2] = tl.getData()[i][j];
                     finalData[i+size/2][j] = br.getData()[i][j];
@@ -92,28 +100,34 @@ public class Cpu extends Component
         int[][] data = matrix.getData();
         int size = matrix.getSize();
 
-        if (size%2 != 0) {
-            throw new IllegalArgumentException("La matrice doit être de taille (2^n)*(2^n), n entier >= 1 pour la permutation.");
+        if (size%2 != 0)
+        {
+            throw new IllegalArgumentException("La matrice doit être de taille (2^n)*(2^n), " +
+                    "n entier >= 1 pour la permutation.");
         }
 
-        if (size == 2) {
-            // Effectuer la rotation
+        if (size == 2)
+        {
+            /* rotation */
             int temp = data[0][0];
             data[0][0] = data[1][0];
             data[1][0] = data[1][1];
             data[1][1] = data[0][1];
             data[0][1] = temp;
 
-            return matrix; // Retourner la matrice modifiée
+            return matrix; // Return the changed matrix
         }
-        else {
+        else
+        {
             int[][] dataTl = new int[size/2][size/2];
             int[][] dataBl = new int[size/2][size/2];
             int[][] dataTr = new int[size/2][size/2];
             int[][] dataBr = new int[size/2][size/2];
 
-            for (int i = 0; i < size/2; i++) {
-                for (int j = 0; j < size/2; j++) {
+            for (int i = 0; i < size/2; i++)
+            {
+                for (int j = 0; j < size/2; j++)
+                {
                     dataTl[i][j] = data[i][j];
                     dataBl[i][j] = data[i+size/2][j];
                     dataTr[i][j] = data[i][j+size/2];
@@ -131,8 +145,10 @@ public class Cpu extends Component
             br = rotation(br);
 
             int[][] finalData = new int[size][size];
-            for (int i = 0; i < size/2; i++) {
-                for (int j = 0; j < size/2; j++) {
+            for (int i = 0; i < size/2; i++)
+            {
+                for (int j = 0; j < size/2; j++)
+                {
                     finalData[i][j] = bl.getData()[i][j];
                     finalData[i][j+size/2] = tl.getData()[i][j];
                     finalData[i+size/2][j] = br.getData()[i][j];
@@ -154,13 +170,17 @@ public class Cpu extends Component
     {
         int totalSum = 0;
         
-        if (m.getSize() != 2) {
-            throw new IllegalArgumentException("La matrice doit être de taille 2x2 pour la résolution.");
+        if (m.getSize() != 2)
+        {
+            throw new IllegalArgumentException(
+                    "La matrice doit être de taille 2x2 pour la résolution.");
         }
 
         int[][] data = m.getData();
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 2; j++) {
+        for (int i = 0; i < 2; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
                 totalSum += data[i][j];
             }
         }
@@ -183,7 +203,7 @@ public class Cpu extends Component
 
     /**
      * Setter of permutationCost
-     * @param permutationCost
+     * @param permutationCost the permutation cost
      */
     public void setPermutationCost(int permutationCost)
     {
@@ -192,7 +212,7 @@ public class Cpu extends Component
 
     /**
      * Getter of rotationCost
-     * @return rotationCost
+     * @return rotationCost the rotation cost
      */
     public int getRotationCost() 
     {
@@ -201,7 +221,7 @@ public class Cpu extends Component
 
     /**
      * Setter of rotationCost
-     * @param rotationCost
+     * @param rotationCost the rotation cost
      */
     public void setRotationCost(int rotationCost)
     {
@@ -210,7 +230,7 @@ public class Cpu extends Component
 
     /**
      * Getter of resolutionCost
-     * @return resolutionCost
+     * @return resolutionCost the resolution cost
      */
     public int getResolutionCost()
     {
@@ -219,7 +239,7 @@ public class Cpu extends Component
 
     /**
      * Setter of resolutionCost
-     * @param resolutionCost
+     * @param resolutionCost the resolution cost
      */
     public void setResolutionCost(int resolutionCost)
     {

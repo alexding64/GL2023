@@ -10,7 +10,7 @@ public class TestPlan
 
     /**
      * Create a test plan from a file at filename
-     * @param filename
+     * @param filename the file name
      * @return testPlan created
      */
     public static TestPlan fromFile(String filename)
@@ -20,17 +20,19 @@ public class TestPlan
 
     /**
      * Get all the matrices
-     * @return
+     * @return all the matrices
      */
-    public Map<String, Matrix> getMatrices() {
+    public Map<String, Matrix> getMatrices()
+    {
         return matrices;
     }
 
     /**
      * Get all the tests of the test plan
-     * @return
+     * @return all the tests
      */
-    public Test[] getTests() {
+    public Test[] getTests()
+    {
         return tests;
     }
 }

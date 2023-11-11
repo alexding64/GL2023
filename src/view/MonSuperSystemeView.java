@@ -5,7 +5,7 @@ import model.*;
 
 import java.util.Scanner;
 
-public class MonSuperSysteme 
+public class MonSuperSystemeView
 {
 	
     private Computer computer;
@@ -45,7 +45,8 @@ public class MonSuperSysteme
                     OutputController outputController = InputController.getOutputController();
                     TestPlan testPlan = InputController.getTestPlan();
 
-                    if (memory != null && cpu != null && outputController != null && testPlan != null)
+                    if (memory != null && cpu != null
+                            && outputController != null && testPlan != null)
                     {
                         System.out.println("Work in progress...");
                         Computer computer = new Computer(memory, outputController, cpu, testPlan);
@@ -59,7 +60,8 @@ public class MonSuperSysteme
                 	oui.test(); //fonction pour tester les calculs des matrices et haut et bas niveau
                 	break;
                 default:
-                    System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
+                    System.out.println(
+                            "Choix invalide. Veuillez sélectionner une option valide.");
             }
         } while (choix != 6);
 

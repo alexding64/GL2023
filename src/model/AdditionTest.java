@@ -7,8 +7,8 @@ public class AdditionTest extends Test
 
     /**
      * Constructor of AdditionTest class
-     * @param name
-     * @param matrix
+     * @param name of the test
+     * @param matrix the address of the matrix
      */
     public AdditionTest(String name, String matrix) 
     {
@@ -31,7 +31,7 @@ public class AdditionTest extends Test
 
     /**
      * Setter of matrix
-     * @param matrix
+     * @param matrix the address of the matrix
      */
     public void setMatrix(String matrix) 
     {

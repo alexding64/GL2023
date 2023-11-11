@@ -7,14 +7,15 @@ public class Test
 
     /**
      * Constructor of Test class
-     * @param operationName
+     * @param operationName the name of the operation
      */
     public Test(String operationName)
     {
         this.operationName = operationName;
     }
 
-    public Test() {
+    public Test()
+    {
 
     }
 
@@ -24,7 +25,7 @@ public class Test
 
     /**
      * Getter of operationName
-     * @return operationName
+     * @return operationName the name of the operation
      */
     public String getOperationName() 
     {
@@ -33,7 +34,7 @@ public class Test
 
     /**
      * Setter of operationName
-     * @param operationName
+     * @param operationName the name of the operation
      */
     public void setOperationName(String operationName)
     {
