@@ -8,8 +8,8 @@ public class RotationTest extends Test
 
     /**
      * Constructor of RotationTest class
-     * @param matrix
-     * @param result
+     * @param matrix the address of the matrix
+     * @param result the address of the result matrix
      */
     public RotationTest(String matrix, String result) 
     {
@@ -23,7 +23,7 @@ public class RotationTest extends Test
 
     /**
      * Getter of matrix
-     * @return matrix
+     * @return matrix the address of the matrix
      */
     public String getMatrix() 
     {
@@ -32,7 +32,7 @@ public class RotationTest extends Test
 
     /**
      * Setter of matrix
-     * @param matrix
+     * @param matrix the address of the matrix
      */
     public void setMatrix(String matrix) 
     {
@@ -41,7 +41,7 @@ public class RotationTest extends Test
 
     /**
      * Getter of result
-     * @return result
+     * @return result the address of the result matrix
      */
     public String getResult() 
     {
@@ -50,7 +50,7 @@ public class RotationTest extends Test
 
     /**
      * Setter of result
-     * @param result
+     * @param result the address of the result matrix
      */
     public void setResult(String result) 
     {

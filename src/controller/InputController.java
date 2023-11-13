@@ -2,6 +2,7 @@ package controller;
 
 import model.*;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.File;
 
@@ -9,7 +10,7 @@ import java.io.File;
 public class InputController 
 {
 	
-    private static String selectedCPU = "Aucun";
+    private static String selectedCpu = "Aucun";
     private static String selectedMemory = "Aucun";
     private static String selectedController = "Aucun";
     private static String selectedTestPlan = "Aucun";
@@ -29,48 +30,55 @@ public class InputController
      * @author Aurélien Paquet
      * @version 1.0
      */
-    
     public static void displayMainMenu()
     {
 	    System.out.println("======== MAIN_MENU ========");
 	    System.out.println("");
 	    System.out.print("CPU : ");
-	    if ("Aucun".equals(selectedCPU)) {
-	        // Afficher en rouge
-	        System.out.print("\u001B[31m" + selectedCPU + "\u001B[0m"); // Code ANSI pour rouge
-	    } else {
-	        // Afficher en vert
-	        System.out.print("\u001B[32m" + selectedCPU + "\u001B[0m"); // Code ANSI pour vert
+	    if ("Aucun".equals(selectedCpu))
+        {
+	        /* Print in red */
+	        System.out.print("\u001B[31m" + selectedCpu + "\u001B[0m"); // ANSI red
+	    } else
+        {
+            /* Print in green */
+	        System.out.print("\u001B[32m" + selectedCpu + "\u001B[0m"); // ANSI green
 	    }
 	    System.out.println("");
 	    
 	    System.out.print("Mémoire : ");
-	    if ("Aucun".equals(selectedMemory)) {
-	        // Afficher en rouge
-	        System.out.print("\u001B[31m" + selectedMemory + "\u001B[0m"); // Code ANSI pour rouge
-	    } else {
-	        // Afficher en vert
-	        System.out.print("\u001B[32m" + selectedMemory + "\u001B[0m"); // Code ANSI pour vert
+	    if ("Aucun".equals(selectedMemory))
+        {
+            /* Print in red */
+	        System.out.print("\u001B[31m" + selectedMemory + "\u001B[0m"); // ANSI red
+	    } else
+        {
+            /* Print in green */
+	        System.out.print("\u001B[32m" + selectedMemory + "\u001B[0m"); // ANSI green
 	    }
 	    System.out.println("");
 	    
 	    System.out.print("Contrôleur de sortie : ");
-	    if ("Aucun".equals(selectedController)) {
-	        // Afficher en rouge
-	        System.out.print("\u001B[31m" + selectedController + "\u001B[0m"); // Code ANSI pour rouge
-	    } else {
-	        // Afficher en vert
-	        System.out.print("\u001B[32m" + selectedController + "\u001B[0m"); // Code ANSI pour vert
+	    if ("Aucun".equals(selectedController))
+        {
+            /* Print in red */
+	        System.out.print("\u001B[31m" + selectedController + "\u001B[0m"); // ANSI red
+	    } else
+        {
+            /* Print in green */
+	        System.out.print("\u001B[32m" + selectedController + "\u001B[0m"); // ANSI green
 	    }
 	    System.out.println("");
 	    
 	    System.out.print("Plan de test : ");
-	    if ("Aucun".equals(selectedTestPlan)) {
-	        // Afficher en rouge
-	        System.out.print("\u001B[31m" + selectedTestPlan + "\u001B[0m"); // Code ANSI pour rouge
-	    } else {
-	        // Afficher en vert
-	        System.out.print("\u001B[32m" + selectedTestPlan + "\u001B[0m"); // Code ANSI pour vert
+	    if ("Aucun".equals(selectedTestPlan))
+        {
+            /* Print in red */
+	        System.out.print("\u001B[31m" + selectedTestPlan + "\u001B[0m"); // ANSI red
+	    } else
+        {
+            /* Print in green */
+	        System.out.print("\u001B[32m" + selectedTestPlan + "\u001B[0m"); // ANSI green
 	    }
 	    System.out.println("");
 	    
@@ -87,6 +95,9 @@ public class InputController
 	    System.out.println("-----------------------------------");
     }
 
+    /**
+     * Display the testPlan list
+     */
     public static void displayTestPlanList()
     {
         File folder = new File(testplanPath);
@@ -109,7 +120,7 @@ public class InputController
         System.out.println("");
         System.out.println("-----------------------------------");
 
-        int userChoice = getTestPlanChoice(choice); // Obtenez le choix de l'utilisateur
+        int userChoice = getTestPlanChoice(choice); // Get the user choice
 
         if (userChoice >= 1 && userChoice < choice)
         {
@@ -122,12 +133,18 @@ public class InputController
      * The user will choose his controller that he wants
      * @author Aurélien Paquet
      * @version 1.0
-     */  
-
+     */
     public static void displayCpuList()
     {
         FileReader fileReader = new FileReader();
-        String[] cpuList = fileReader.getCpuList(cpuPath);
+        String[] cpuList = new String[0];
+        try
+        {
+            cpuList = fileReader.getCpuList(cpuPath);
+        } catch (FileNotFoundException e)
+        {
+            throw new RuntimeException(e);
+        }
 
         if (cpuList.length == 0)
         {
@@ -156,7 +173,7 @@ public class InputController
 
             if (userChoice >= 1 && userChoice <= cpuList.length)
             {
-                selectedCPU = cpuList[userChoice - 1];
+                selectedCpu = cpuList[userChoice - 1];
                 break; 
             } else if (userChoice == 0)
             {
@@ -172,11 +189,17 @@ public class InputController
      * @author Aurélien Paquet
      * @version 1.0
      */
-    
     public static void displayMemoryList()
     {
         FileReader fileReader = new FileReader();
-        String[] memoryList = fileReader.getMemoryList(memoryPath);
+        String[] memoryList = new String[0];
+        try
+        {
+            memoryList = fileReader.getMemoryList(memoryPath);
+        } catch (FileNotFoundException e)
+        {
+            throw new RuntimeException(e);
+        }
 
         if (memoryList.length == 0)
         {
@@ -221,11 +244,17 @@ public class InputController
      * @author Aurélien Paquet
      * @version 1.0
      */
-    
     public static void displayOutputCtrlList()
     {
         FileReader fileReader = new FileReader();
-        String[] outputCtrlList = fileReader.getOutputCtrlList(outputPath);
+        String[] outputCtrlList = new String[0];
+        try
+        {
+            outputCtrlList = fileReader.getOutputCtrlList(outputPath);
+        } catch (FileNotFoundException e)
+        {
+            throw new RuntimeException(e);
+        }
 
         if (outputCtrlList.length == 0)
         {
@@ -264,17 +293,26 @@ public class InputController
         }
     }
 
+    /**
+     * Get the choice in the main menu
+     * @return choice made
+     */
     public static int getMainMenuChoice() 
     {
         Scanner scanner = new Scanner(System.in);
-        int choix = 0;
+        int choice = 0;
 
         System.out.print("Votre choix : ");
-        choix = scanner.nextInt();
+        choice = scanner.nextInt();
 
-        return choix;
+        return choice;
     }
 
+    /**
+     * Get the cpu chosen
+     * @param maxChoice the maximum
+     * @return choice made
+     */
     public static int getCpuChoice(int maxChoice) 
     {
         Scanner scanner = new Scanner(System.in);
@@ -288,36 +326,46 @@ public class InputController
                 choice = scanner.nextInt();
                 if (choice >= 0 && choice <= maxChoice)
                 {
-                    break; // Sort de la boucle si le choix est valide
-                } else {
+                    break; // Exit
+                } else
+                {
                     System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
                 }
-            } else {
-                scanner.next(); // Pour consommer l'entrée invalide
+            } else
+            {
+                scanner.next();
                 System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
             }
         }
         return choice;
     }
-    
+
+    /**
+     * Get the testPlan chosen
+     * @param maxChoice the maximum
+     * @return choice made
+     */
     public static int getTestPlanChoice(int maxChoice) 
     {
         Scanner scanner = new Scanner(System.in);
         int choice = -1;
 
-        while (true) {
+        while (true)
+        {
             System.out.print("Votre choix : ");
             if (scanner.hasNextInt())
             {
                 choice = scanner.nextInt();
                 if (choice >= 0 && choice <= maxChoice)
                 {
-                    break; // Sort de la boucle si le choix est valide
-                } else {
+                    break; // Exit
+                } else
+                {
                     System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
                 }
-            } else {
-                scanner.next(); // Pour consommer l'entrée invalide
+            } else
+            {
+                scanner.next();
                 System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
             }
         }
@@ -325,6 +373,11 @@ public class InputController
         return choice;
     }
 
+    /**
+     * Get the memory chosen
+     * @param maxChoice the maximum
+     * @return choice made
+     */
     public static int getMemoryChoice(int maxChoice) 
     {
         Scanner scanner = new Scanner(System.in);
@@ -338,12 +391,14 @@ public class InputController
                 choice = scanner.nextInt();
                 if (choice >= 0 && choice <= maxChoice)
                 {
-                    break; // Sort de la boucle si le choix est valide
-                } else {
+                    break; // Exit
+                } else
+                {
                     System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
                 }
-            } else {
-                scanner.next(); // Pour consommer l'entrée invalide
+            } else
+            {
+                scanner.next();
                 System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
             }
         }
@@ -351,6 +406,11 @@ public class InputController
         return choice;
     }
 
+    /**
+     * Get the outputController chosen
+     * @param maxChoice tje maximum
+     * @return choice made
+     */
     public static int getOutputCtrlChoice(int maxChoice) 
     {
         Scanner scanner = new Scanner(System.in);
@@ -364,12 +424,14 @@ public class InputController
                 choice = scanner.nextInt();
                 if (choice >= 0 && choice <= maxChoice)
                 {
-                    break; // Sort de la boucle si le choix est valide
-                } else {
+                    break; // Exit
+                } else
+                {
                     System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
                 }
-            } else {
-                scanner.next(); // Pour consommer l'entrée invalide
+            } else
+            {
+                scanner.next();
                 System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
             }
         }
@@ -378,7 +440,7 @@ public class InputController
     }
 
     /**
-     * model.Cpu getter
+     * Getter of cpu
      * @return cpu
      */
     public static Cpu getCpu()
@@ -387,7 +449,7 @@ public class InputController
     }
 
     /**
-     * model.Memory getter
+     * Getter of memory
      * @return memory
      */
     public static Memory getMemory()
@@ -396,7 +458,7 @@ public class InputController
     }
 
     /**
-     * Output getter
+     * Getter of outputController
      * @return outputController
      */
     public static OutputController getOutputController()
@@ -405,7 +467,7 @@ public class InputController
     }
 
     /**
-     * model.TestPlan Getter
+     * Getter of testPlan
      * @return testPlan
      */
     public static TestPlan getTestPlan()

@@ -2,6 +2,8 @@ package model;
 
 import model.Component;
 
+import java.util.logging.Logger;
+
 public class OutputController extends Component
 {
 	
@@ -9,26 +11,28 @@ public class OutputController extends Component
 
     /**
      * Constructor of OutputController class
-     * @param name
-     * @param logCost
+     * @param name the name of the output controller
+     * @param logCost the cost of log
      */
-    public OutputController(String name, int logCost) {
+    public OutputController(String name, int logCost)
+    {
         super(name);
         this.logCost = logCost;
     }
 
     /**
      * Display a message
-     * @param msg
+     * @param msg to log
      */
     public void log(Object msg) 
     {
-    	System.out.println(msg.toString());
+        Logger logger = Logger.getLogger(OutputController.class.getName());
+    	logger.info(msg.toString());
     }
 
     /**
      * Display a message
-     * @param msg
+     * @param msg to log
      */
     public void logFree(Object msg)
     {

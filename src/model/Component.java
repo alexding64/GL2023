@@ -8,7 +8,7 @@ public class Component
 
     /**
      * Constructor of Component class
-     * @param name
+     * @param name the component name
      */
     public Component(String name) 
     {
@@ -32,7 +32,7 @@ public class Component
 
     /**
      * Getter of name
-     * @return name
+     * @return name of the component
      */
     public String getName() 
     {
@@ -41,7 +41,7 @@ public class Component
 
     /**
      * Setter of name
-     * @param name
+     * @param name of the component
      */
     public void setName(String name) 
     {
@@ -50,7 +50,7 @@ public class Component
 
     /**
      * Getter of totalUsage
-     * @return totalUsage
+     * @return totalUsage the usage of the component
      */
     public int getTotalUsage() 
     {
@@ -59,7 +59,7 @@ public class Component
 
     /**
      * Setter of totalUsage
-     * @param totalUsage
+     * @param totalUsage the usage of the component
      */
     public void setTotalUsage(int totalUsage)
     {

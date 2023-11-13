@@ -10,9 +10,9 @@ public class AdditionNTest extends Test
 
     /**
      * Constructor of AdditionNTest class
-     * @param matrix1
-     * @param matrix2
-     * @param result
+     * @param matrix1 the address of the first matrix
+     * @param matrix2 the address of the second matrix
+     * @param result the address of the result matrix
      */
     public AdditionNTest(String matrix1, String matrix2, String result)
     {
@@ -28,7 +28,7 @@ public class AdditionNTest extends Test
 
     /**
      * Getter of matrix1
-     * @return matrix1
+     * @return matrix1 the first matrix
      */
     public String getMatrix1()
     {
@@ -37,7 +37,7 @@ public class AdditionNTest extends Test
 
     /**
      * Setter of matrix1
-     * @param matrix1
+     * @param matrix1 the first matrix
      */
     public void setMatrix1(String matrix1)
     {
@@ -46,7 +46,7 @@ public class AdditionNTest extends Test
 
     /**
      * Getter of matrix2
-     * @return matrix2
+     * @return matrix2 the second matrix
      */
     public String getMatrix2()
     {
@@ -55,7 +55,7 @@ public class AdditionNTest extends Test
 
     /**
      * Setter of matrix2
-     * @param matrix2
+     * @param matrix2 the second matrix
      */
     public void setMatrix2(String matrix2)
     {
@@ -64,7 +64,7 @@ public class AdditionNTest extends Test
 
     /**
      * Getter of Result
-     * @return result
+     * @return result the address of the result matrix
      */
     public String getResult()
     {
@@ -73,7 +73,7 @@ public class AdditionNTest extends Test
 
     /**
      * Setter of result
-     * @param result
+     * @param result the address of the result matrix
      */
     public void setResult(String result)
     {

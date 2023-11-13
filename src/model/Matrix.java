@@ -9,31 +9,49 @@ public class Matrix
     private int[][] data;
 
     /**
-     * Constructor of MAtrix class
-     * @param size
-     * @param data
+     * Constructor of Matrix class
+     * @param size of the matrix
+     * @param data of the matrix
      */
     public Matrix(int size, int[][] data) 
     {
     	this.size = size;
     	this.data = data;
     }
-    
-    public Matrix generateRandomMatrix() {
+
+    /**
+     * Generate a random square matrix
+     * @param size of the matrix
+     * @return matrix
+     */
+    public static Matrix generateRandomSquareMatrix(int size) 
+    {
         Random random = new Random();
-        int[][] data = new int[2][2];
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 2; j++) {
-                data[i][j] = random.nextInt(9); // Générer un nombre aléatoire entre 0 et 9
+        int[][] data = new int[size][size];
+
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < size; j++)
+            {
+                data[i][j] = random.nextInt(9) + 1; // Generate a random number between 1 and 9
             }
         }
-        return new Matrix(2, data);
+
+        return new Matrix(size, data);
     }
-    
-    public void printMatrix() {
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                System.out.print(data[i][j] + " ");
+
+    /**
+     * Print a matrix
+     * @param matrix to print
+     */
+    public static void printMatrix(Matrix matrix) 
+    {
+        int size = matrix.getSize();
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < size; j++)
+            {
+                System.out.print(matrix.getData()[i][j] + " ");
             }
             System.out.println();
         }
@@ -42,19 +60,38 @@ public class Matrix
     /**
      * GETTER & SETTER
      */
-    
+
+    /**
+     * Getter of size
+     * @return the matrix size
+     */
 	public int getSize() 
 	{
 		return size;
 	}
+
+    /**
+     * Setter of size
+     * @param size of the matrix
+     */
 	public void setSize(int size) 
 	{
 		this.size = size;
 	}
+
+    /**
+     * Getter of data
+     * @return data
+     */
 	public int[][] getData() 
 	{
 		return data;
 	}
+
+    /**
+     * Setter of data
+     * @param data of the matrix
+     */
 	public void setData(int[][] data) 
 	{
 		this.data = data;

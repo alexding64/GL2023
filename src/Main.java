@@ -1,11 +1,11 @@
-import view.MonSuperSysteme;
+import view.MonSuperSystemeView;
 
 public class Main
 {
 	
     public static void main(String[] args)
     {
-        MonSuperSysteme systeme = new MonSuperSysteme();
+        MonSuperSystemeView systeme = new MonSuperSystemeView();
         systeme.run();
     }
 }

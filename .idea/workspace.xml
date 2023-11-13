@@ -4,25 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Remise norme conventions &lt;&lt;longueur de lignes&gt;&gt;">
-      <change afterPath="$PROJECT_DIR$/src/model/Computer.java" afterDir="false" />
+    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="- Avancement execution tests&#10;- Mise en place du mvc&#10;- Ajout doc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdditionNTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AdditionNTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdditionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AdditionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Computer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InputController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MirrorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MirrorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MonSuperSysteme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MonSuperSysteme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OutputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/OutputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RotationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TestPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AdditionNTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AdditionNTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AdditionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AdditionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Computer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MirrorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MirrorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OutputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/OutputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RotationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TestPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TestPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MonSuperSysteme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MonSuperSystemeView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,21 +59,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/celia/Documents/Polytech/UQAC/T1/GenieLogiciel/Projet/DEV1_V2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/dorai/IdeaProjects/GL2023/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/celia/Documents/Polytech/UQAC/T1/GenieLogiciel/Projet/ProjetGL2023&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/dorai/IdeaProjects/GL2023/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\celia\Documents\Polytech\UQAC\T1\GenieLogiciel\Projet\ProjetGL2023\src" />
@@ -107,7 +106,9 @@
       <workItem from="1698248574623" duration="497000" />
       <workItem from="1698419989830" duration="11095000" />
       <workItem from="1698863440716" duration="1763000" />
-      <workItem from="1699195943720" duration="5639000" />
+      <workItem from="1699195943720" duration="6300000" />
+      <workItem from="1699459050587" duration="986000" />
+      <workItem from="1699734430005" duration="3870000" />
     </task>
     <task id="LOCAL-00001" summary="Compilation + Rectification menu">
       <option name="closed" value="true" />
@@ -149,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698863985482</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- Avancement execution tests&#10;- Mise en place du mvc&#10;- Ajout doc">
+      <option name="closed" value="true" />
+      <created>1699201702268</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699201702269</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +181,7 @@
     <MESSAGE value="création des composants apres choix" />
     <MESSAGE value="Correction liste TestPlan&#10;Ajout structure Execution" />
     <MESSAGE value="Remise norme conventions &lt;&lt;longueur de lignes&gt;&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remise norme conventions &lt;&lt;longueur de lignes&gt;&gt;" />
+    <MESSAGE value="- Avancement execution tests&#10;- Mise en place du mvc&#10;- Ajout doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Avancement execution tests&#10;- Mise en place du mvc&#10;- Ajout doc" />
   </component>
 </project>
