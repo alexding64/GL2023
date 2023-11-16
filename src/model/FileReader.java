@@ -174,7 +174,8 @@ public class FileReader
         File item = new File(path);
         List<String> parametersList = getValuesFromFile(item);
         String[] fileName = path.split("/");
-        return TestPlan.fromFile(fileName[fileName.length-1]);
+        return TestPlan.fromFile(path);
+//        return TestPlan.fromFile(fileName[fileName.length-1]);
 //        return new OutputController(fileName[fileName.length-1],
 //                Integer.parseInt(parametersList.get(0)));
     }
@@ -198,6 +199,24 @@ public class FileReader
                     String value = line[1];
                     values.add(value);
                 }
+            }
+            myReader.close();
+        } catch (FileNotFoundException e)
+        {
+            throw new RuntimeException(e);
+        }
+        return values;
+    }
+
+    public static List<String> getLinesFromFile(File file)
+    {
+        List<String> values = new ArrayList<>();
+        Scanner myReader = null;
+        try
+        {
+            myReader = new Scanner(file);
+            while (myReader.hasNextLine()) {
+                values.add(myReader.nextLine());
             }
             myReader.close();
         } catch (FileNotFoundException e)
