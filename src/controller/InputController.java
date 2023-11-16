@@ -100,31 +100,50 @@ public class InputController
      */
     public static void displayTestPlanList()
     {
-        File folder = new File(testplanPath);
-        File[] files = folder.listFiles();
-        int choice = 1;
-
-        if (files != null)
+        FileReader fileReader = new FileReader();
+        String[] testPlanList;
+        try
         {
-            for (File file : files)
-            {
-                if (file.isFile() && file.getName().endsWith(".txt"))
-                {
-                    System.out.println(choice + ". " + file.getName().replace(".txt", ""));
-                    choice++;
-                }
-            }
+            testPlanList = fileReader.getTestPlanList(testplanPath);
+        } catch (FileNotFoundException e)
+        {
+            throw new RuntimeException(e);
         }
 
-        System.out.println("0. Quitter");
-        System.out.println("");
-        System.out.println("-----------------------------------");
-
-        int userChoice = getTestPlanChoice(choice); // Get the user choice
-
-        if (userChoice >= 1 && userChoice < choice)
+        if (testPlanList.length == 0)
         {
-            selectedTestPlan = files[userChoice - 1].getName().replace(".txt", "");
+            System.out.println("Aucun plan de test disponible.");
+            return;
+        }
+
+        int choice = 1;
+
+        while (true)
+        {
+            System.out.println("======== CHOIX DU PLAN DE TEST ========\n");
+            System.out.println("Plans de test disponibles : ");
+
+            for (String testPlanName : testPlanList)
+            {
+                System.out.println(choice + ". " + testPlanName);
+                choice++;
+            }
+
+            System.out.println("0. Quitter");
+            System.out.println("");
+            System.out.println("-----------------------------------");
+
+            int userChoice = getTestPlanChoice(testPlanList.length);
+
+            if (userChoice >= 1 && userChoice <= testPlanList.length)
+            {
+                selectedTestPlan = testPlanList[userChoice - 1];
+                testPlan = fileReader.getTestPlan(testplanPath + "/" + testPlanList[userChoice - 1] + ".txt");
+                break;
+            } else if (userChoice == 0)
+            {
+                break;
+            }
         }
     }
 
@@ -174,6 +193,7 @@ public class InputController
             if (userChoice >= 1 && userChoice <= cpuList.length)
             {
                 selectedCpu = cpuList[userChoice - 1];
+                cpu = fileReader.getCpu(cpuPath + "/" + cpuList[userChoice - 1] + ".txt");
                 break; 
             } else if (userChoice == 0)
             {
@@ -221,7 +241,7 @@ public class InputController
             }
 
             System.out.println("0. Quitter");
-            System.out.println("");
+            System.out.println();
             System.out.println("-----------------------------------");
 
             int userChoice = getMemoryChoice(memoryList.length); 
@@ -229,7 +249,8 @@ public class InputController
             if (userChoice >= 1 && userChoice <= memoryList.length)
             {
                 selectedMemory = memoryList[userChoice - 1];
-                break; 
+                memory = fileReader.getMemory(memoryPath + "/" + memoryList[userChoice - 1] + ".txt");
+                break;
             } else if (userChoice == 0)
             {
                 break; 
@@ -276,7 +297,7 @@ public class InputController
             }
 
             System.out.println("0. Quitter");
-            System.out.println("");
+            System.out.println();
             System.out.println("-----------------------------------");
 
             int userChoice = getOutputCtrlChoice(outputCtrlList.length); 
@@ -284,7 +305,7 @@ public class InputController
             if (userChoice >= 1 && userChoice <= outputCtrlList.length)
             {
                 selectedController = outputCtrlList[userChoice - 1];
-
+                outputController = fileReader.getOutputController(outputPath + "/" + outputCtrlList[userChoice - 1] + ".txt");
                 break; 
             } else if (userChoice == 0)
             {

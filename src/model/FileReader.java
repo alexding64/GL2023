@@ -15,9 +15,27 @@ public class FileReader
      * Get the list of test plans
      * @return the list of test plans
      */
-    public String[] getTestPlanList()
+    public String[] getTestPlanList(String directoryPath) throws FileNotFoundException
     {
-        return new String['0'];
+        File folder = new File(directoryPath);
+        File[] files = folder.listFiles();
+        List<String> testPlanNames = new ArrayList<>();
+
+        if (files != null)
+        {
+            for (File file : files)
+            {
+                if (file.isFile() && file.getName().endsWith(".txt"))
+                {
+                    testPlanNames.add(file.getName().replace(".txt", ""));
+                }
+            }
+        } else
+        {
+            throw new FileNotFoundException("Le fichier n'a pas été trouvé");
+        }
+
+        return testPlanNames.toArray(new String[0]);
     }
 
     /**
@@ -144,6 +162,21 @@ public class FileReader
         String[] fileName = path.split("/");
         return new OutputController(fileName[fileName.length-1],
                 Integer.parseInt(parametersList.get(0)));
+    }
+
+    /**
+     * Create an output with values in the file path
+     * @param path of the file chosen
+     * @return the output created
+     */
+    public TestPlan getTestPlan(String path)
+    {
+        File item = new File(path);
+        List<String> parametersList = getValuesFromFile(item);
+        String[] fileName = path.split("/");
+        return TestPlan.fromFile(fileName[fileName.length-1]);
+//        return new OutputController(fileName[fileName.length-1],
+//                Integer.parseInt(parametersList.get(0)));
     }
 
     /**

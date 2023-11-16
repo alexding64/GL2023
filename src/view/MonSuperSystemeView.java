@@ -44,6 +44,7 @@ public class MonSuperSystemeView
                     Cpu cpu = InputController.getCpu();
                     OutputController outputController = InputController.getOutputController();
                     TestPlan testPlan = InputController.getTestPlan();
+                    System.out.println("euqedu : " + cpu + " " + memory + " " + outputController + " " + testPlan);
 
                     if (memory != null && cpu != null
                             && outputController != null && testPlan != null)
