@@ -88,4 +88,6 @@ public class Memory extends Component
         this.setCost = setCost;
     }
 
+    public Map<String, Matrix> getData() { return data; }
+
 }

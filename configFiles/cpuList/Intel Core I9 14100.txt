@@ -1,3 +1,4 @@
 permutationCost=8
 rotationCost=6
 resolutionCost=2
+additionCost=1

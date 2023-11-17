@@ -5,16 +5,19 @@ import model.Component;
 public class Cpu extends Component
 {
 	
-    private int permutationCost;
-    private int rotationCost;
-    private int resolutionCost;
+    private static int permutationCost;
+    private static int rotationCost;
+    private static int resolutionCost;
+    private static int additionCost;
+    public static int total_cost;
 
-    public Cpu(String name, int permutationCost, int rotationCost, int resolutionCost)
+    public Cpu(String name, int permutationCost, int rotationCost, int resolutionCost, int additionCost)
     {
         super(name);
-        this.permutationCost = permutationCost;
-        this.rotationCost = rotationCost;
-        this.resolutionCost = resolutionCost;
+        Cpu.permutationCost = permutationCost;
+        Cpu.rotationCost = rotationCost;
+        Cpu.resolutionCost = resolutionCost;
+        Cpu.additionCost = additionCost;
     }
       
     /**
@@ -32,6 +35,8 @@ public class Cpu extends Component
             throw new IllegalArgumentException("La matrice doit être de taille (2^n)*(2^n)," +
                     " n entier >= 1 pour la permutation.");
         }
+
+        total_cost += permutationCost;
 
         if (size == 2)
         {
@@ -106,6 +111,8 @@ public class Cpu extends Component
                     "n entier >= 1 pour la permutation.");
         }
 
+        total_cost += rotationCost;
+
         if (size == 2)
         {
             /* rotation */
@@ -176,6 +183,8 @@ public class Cpu extends Component
                     "La matrice doit être de taille 2x2 pour la résolution.");
         }
 
+        total_cost += resolutionCost;
+
         int[][] data = m.getData();
         for (int i = 0; i < 2; i++)
         {
@@ -187,7 +196,99 @@ public class Cpu extends Component
         
     return totalSum;
     }
-    
+
+    /**
+     * Method to rotate a 2x2 model.Matrix
+     * @param matrix is the matrix to be rotated
+     * @return m the rotated matrix
+     */
+    public static Matrix addition(Matrix matrix1, Matrix matrix2)
+    {
+        int[][] data1 = matrix1.getData();
+        int size1 = matrix1.getSize();
+        int[][] data2 = matrix2.getData();
+        int size2 = matrix2.getSize();
+
+        if (size1 != size2) {
+            throw new IllegalArgumentException("Les matrices doivent être de même taille.");
+        }
+
+        if (size1%2 != 0 || size2%2 != 0)
+        {
+            throw new IllegalArgumentException("La matrice doit être de taille (2^n)*(2^n), " +
+                    "n entier >= 1 pour l'addition de matrices.");
+        }
+
+        total_cost += additionCost;
+
+        if (size1 == 2)
+        {
+            int[][] data = new int[2][2];
+
+            for (int i = 0; i < 2; i++) {
+                for (int j = 0; j < 2; j++) {
+                    data[i][j] = data1[i][j] + data2[i][j];
+                }
+            }
+
+            return new Matrix(2, data);
+        }
+        else
+        {
+            int[][] dataTl1 = new int[size1/2][size1/2];
+            int[][] dataBl1 = new int[size1/2][size1/2];
+            int[][] dataTr1 = new int[size1/2][size1/2];
+            int[][] dataBr1 = new int[size1/2][size1/2];
+            int[][] dataTl2 = new int[size2/2][size2/2];
+            int[][] dataBl2 = new int[size2/2][size2/2];
+            int[][] dataTr2 = new int[size2/2][size2/2];
+            int[][] dataBr2 = new int[size2/2][size2/2];
+
+            for (int i = 0; i < size1/2; i++)
+            {
+                for (int j = 0; j < size1/2; j++)
+                {
+                    dataTl1[i][j] = data1[i][j];
+                    dataTl2[i][j] = data2[i][j];
+                    dataTr1[i][j] = data1[i][j+size1/2];
+                    dataTr2[i][j] = data2[i][j+size1/2];
+                    dataBl1[i][j] = data1[i+size1/2][j];
+                    dataBl2[i][j] = data2[i+size1/2][j];
+                    dataBr1[i][j] = data1[i+size1/2][j+size1/2];
+                    dataBr2[i][j] = data2[i+size1/2][j+size1/2];
+                }
+            }
+            Matrix tl1 = new Matrix(size1/2, dataTl1);
+            Matrix bl1 = new Matrix(size1/2, dataBl1);
+            Matrix tr1 = new Matrix(size1/2, dataTr1);
+            Matrix br1 = new Matrix(size1/2, dataBr1);
+            Matrix tl2 = new Matrix(size2/2, dataTl2);
+            Matrix bl2 = new Matrix(size2/2, dataBl2);
+            Matrix tr2 = new Matrix(size2/2, dataTr2);
+            Matrix br2 = new Matrix(size2/2, dataBr2);
+
+            Matrix tl = addition(tl1, tl2);
+            Matrix bl = addition(bl1, bl2);
+            Matrix tr = addition(tr1, tr2);
+            Matrix br = addition(br1, br2);
+
+            int[][] finalData = new int[size1][size1];
+            for (int i = 0; i < size1/2; i++)
+            {
+                for (int j = 0; j < size1/2; j++)
+                {
+                    finalData[i][j] = tl.getData()[i][j];
+                    finalData[i][j+size1/2] = tr.getData()[i][j];
+                    finalData[i+size1/2][j] = bl.getData()[i][j];
+                    finalData[i+size1/2][j+size1/2] = br.getData()[i][j];
+
+                }
+            }
+
+            return new Matrix(size1, finalData);
+        }
+    }
+
     /**
      * GETTER & SETTER
      */

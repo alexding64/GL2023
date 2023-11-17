@@ -1,6 +1,7 @@
 package model;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,6 +21,7 @@ public class TestPlan
         File file = new File(filename);
         List<String> lines = FileReader.getLinesFromFile(file);
         TestPlan testPlan = new TestPlan();
+        testPlan.matrices = new HashMap<>();
 
         int i = 0;
         int n = 0; // the number of matrices
@@ -44,7 +46,11 @@ public class TestPlan
 
         int m = 0; // the number of tests
         do {
-            m = Integer.parseInt(lines.get(i).replace(" ", "").replace("tests:", ""));
+            try {
+                m = Integer.parseInt(lines.get(i).replace(" ", "").replace("tests:", ""));
+            } catch (Exception ignored) {
+
+            }
             i++;
         } while (m == 0);
 
@@ -54,35 +60,35 @@ public class TestPlan
             while (lines.get(i).isEmpty()) {
                 i++;
             }
-            String line = lines.get(i).replace(" ", "").toLowerCase();
+            String line = lines.get(i).replace(" ", "");
 
-            if (line.contains("addition")) {
-                if (line.contains("additionn")) {
+            if (line.toLowerCase().contains("addition")) {
+                if (line.toLowerCase().contains("additionn")) {
                     int separator = line.indexOf("=");
                     String result = line.substring(0, separator);
                     String[] matricesCalculate = line.substring(separator+1)
-                            .replace("additionn(", "").replace(")", "")
+                            .replaceAll("(?i)additionn\\(", "").replace(")", "")
                             .split(",");
                     testPlan.tests[j] = new AdditionNTest(matricesCalculate[0], matricesCalculate[1], result);
                 }
                 else {
-                    String matrixCalculate = line.replace("addition(", "")
+                    String matrixCalculate = line.replaceAll("(?i)addition\\(", "")
                             .replace(")", "");
                     testPlan.tests[j] = new AdditionTest(matrixCalculate);
                 }
             }
-            else if (line.contains("rotation")) {
+            else if (line.toLowerCase().contains("rotation")) {
                 int separator = line.indexOf("=");
                 String result = line.substring(0, separator);
-                String matrixCalculate = line.substring(separator+1).replace("rotation(", "")
-                        .replace(")", "");
+                String matrixCalculate = line.substring(separator+1)
+                        .replaceAll("(?i)rotation\\(", "").replace(")", "");
                 testPlan.tests[j] = new RotationTest(matrixCalculate, result);
             }
-            else if (line.contains("mirror")) {
+            else if (line.toLowerCase().contains("mirror")) {
                 int separator = line.indexOf("=");
                 String result = line.substring(0, separator);
-                String matrixCalculate = line.substring(separator+1).replace("mirror(", "")
-                        .replace(")", "");
+                String matrixCalculate = line.substring(separator+1)
+                        .replaceAll("(?i)mirror\\(", "").replace(")", "");
                 testPlan.tests[j] = new MirrorTest(matrixCalculate, result);
             }
             i++;

@@ -34,11 +34,14 @@ public class Computer
     public void exec()
     {
     	initMemory(testPlan.getMatrices());
+        int totalCost = 0;
         for (Test test : testPlan.getTests())
         {
             int cost = execTest(test);
+            totalCost += cost;
             outputController.log("Coût du test : " + cost);
         }
+        outputController.log("Coût total du plan de test : " + totalCost);
     }
 
     /**
@@ -104,25 +107,25 @@ public class Computer
      */
     private int execTest(Test test)
     {
-        int cost = 0;
+        Cpu.total_cost = 0;
         switch (test.getOperationName())
         {
             case "Addition" :
-                cost = scalarAddition(((AdditionTest)test).getMatrix());
+                scalarAddition(((AdditionTest)test).getMatrix());
                 break;
             case "AdditionN" :
-                cost = scalarNAddition(((AdditionNTest)test).getMatrix1(),
+                scalarNAddition(((AdditionNTest)test).getMatrix1(),
                                             ((AdditionNTest)test).getMatrix2(),
                                             ((AdditionNTest)test).getResult());
                 break;
             case "Rotation" :
-                cost = rotation(((RotationTest)test).getMatrix(), ((RotationTest)test).getResult());
+                rotation(((RotationTest)test).getMatrix(), ((RotationTest)test).getResult());
                 break;
             default: // Mirror
-                cost = mirror(((MirrorTest)test).getMatrix(), ((MirrorTest)test).getResult());
+                mirror(((MirrorTest)test).getMatrix(), ((MirrorTest)test).getResult());
                 break;
         }
-        return 0;
+        return Cpu.total_cost;
     }
 
     /**
@@ -133,12 +136,7 @@ public class Computer
     private int scalarAddition(String src)
     {
         Matrix matrix = memory.get(src);
-        if (matrix.getSize() == 2)
-        {
-            return cpu.resolution(matrix);
-        }
-        //TODO
-        return 0;
+        return Cpu.resolution(matrix);
     }
 
     /**
@@ -150,6 +148,9 @@ public class Computer
      */
     private int scalarNAddition(String mat1, String mat2, String dest)
     {
+        Matrix matrix1 = memory.get(mat1);
+        Matrix matrix2 = memory.get(mat2);
+        memory.set(dest, Cpu.addition(matrix1, matrix2));
         return 0;
     }
 
@@ -162,10 +163,7 @@ public class Computer
     private int rotation(String src, String dest)
     {
         Matrix matrix = memory.get(src);
-        if (matrix.getSize() == 2) {
-            memory.set(dest, cpu.rotation(matrix));
-        }
-        //TODO
+        memory.set(dest, Cpu.rotation(matrix));
         return 0;
     }
 
@@ -178,10 +176,7 @@ public class Computer
     private int mirror(String src, String dest)
     {
         Matrix matrix = memory.get(src);
-        if (matrix.getSize() == 2) {
-            memory.set(dest, cpu.permutation(matrix));
-        }
-        //TODO
+        memory.set(dest, Cpu.permutation(matrix));
         return 0;
     }
 }

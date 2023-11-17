@@ -133,7 +133,8 @@ public class FileReader
         List<String> parametersList = getValuesFromFile(item);
         String[] fileName = path.split("/");
         return new Cpu(fileName[fileName.length-1], Integer.parseInt(parametersList.get(0)),
-                Integer.parseInt(parametersList.get(1)), Integer.parseInt(parametersList.get(2)));
+                Integer.parseInt(parametersList.get(1)), Integer.parseInt(parametersList.get(2)),
+                Integer.parseInt(parametersList.get(3)));
     }
 
     /**
