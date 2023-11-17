@@ -19,7 +19,7 @@ public class MirrorTest extends Test
     	this.result = result;
     }
 
-    /**
+    /*
      * GETTER & SETTER
      */
 
@@ -34,7 +34,7 @@ public class MirrorTest extends Test
 
 	/**
 	 * Setter of matrix
-	 * @param matrix
+	 * @param matrix the new matrix
 	 */
 	public void setMatrix(String matrix) 
 	{

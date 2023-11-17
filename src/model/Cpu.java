@@ -1,6 +1,5 @@
 package model;
 
-import model.Component;
 
 public class Cpu extends Component
 {
@@ -19,7 +18,9 @@ public class Cpu extends Component
         Cpu.resolutionCost = resolutionCost;
         Cpu.additionCost = additionCost;
     }
-      
+
+    //TODO : create function to initialise corner matrices, duplicated code below (permutation, rotation, resolve)
+
     /**
      * Method to permute a 2x2 model.Matrix
      * @param m is the matrix to be permuted
@@ -198,9 +199,10 @@ public class Cpu extends Component
     }
 
     /**
-     * Method to rotate a 2x2 model.Matrix
-     * @param matrix is the matrix to be rotated
-     * @return m the rotated matrix
+     * Method to add two different model.Matrix
+     * @param matrix1 is the first matrix to be added
+     * @param matrix2 is the second matrix to be added
+     * @return m the summed matrix
      */
     public static Matrix addition(Matrix matrix1, Matrix matrix2)
     {
@@ -213,7 +215,7 @@ public class Cpu extends Component
             throw new IllegalArgumentException("Les matrices doivent être de même taille.");
         }
 
-        if (size1%2 != 0 || size2%2 != 0)
+        if (size1%2 != 0)
         {
             throw new IllegalArgumentException("La matrice doit être de taille (2^n)*(2^n), " +
                     "n entier >= 1 pour l'addition de matrices.");
@@ -289,7 +291,7 @@ public class Cpu extends Component
         }
     }
 
-    /**
+    /*
      * GETTER & SETTER
      */
 
@@ -308,7 +310,7 @@ public class Cpu extends Component
      */
     public void setPermutationCost(int permutationCost)
     {
-        this.permutationCost = permutationCost;
+        Cpu.permutationCost = permutationCost;
     }
 
     /**
@@ -326,7 +328,7 @@ public class Cpu extends Component
      */
     public void setRotationCost(int rotationCost)
     {
-        this.rotationCost = rotationCost;
+        Cpu.rotationCost = rotationCost;
     }
 
     /**
@@ -344,6 +346,6 @@ public class Cpu extends Component
      */
     public void setResolutionCost(int resolutionCost)
     {
-        this.resolutionCost = resolutionCost;
+        Cpu.resolutionCost = resolutionCost;
     }
 }

@@ -19,7 +19,7 @@ public class Test
 
     }
 
-    /**
+    /*
      * GETTER & SETTER
      */
 

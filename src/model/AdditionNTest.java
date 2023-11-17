@@ -22,7 +22,7 @@ public class AdditionNTest extends Test
         this.result = result;
     }
 
-    /**
+    /*
      * GETTER & SETTER
      */
 

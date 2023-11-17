@@ -24,7 +24,7 @@ public class TestPlan
         testPlan.matrices = new HashMap<>();
 
         int i = 0;
-        int n = 0; // the number of matrices
+        int n; // the number of matrices
         do {
             n = Integer.parseInt(lines.get(i).replace(" ", "").replace("matrices:", ""));
             i++;
@@ -100,8 +100,8 @@ public class TestPlan
     private static int[][] parseMatrix(String matrixString) {
         // Remove brackets and split into rows
         String[] rows = matrixString.replaceAll("\\[\\[", "")
-                .replaceAll("\\]\\]", "")
-                .split("\\],\\[");
+                .replaceAll("]]", "")
+                .split("],\\[");
 
         int numRows = rows.length;
         int numCols = rows[0].split(",").length;

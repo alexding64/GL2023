@@ -17,7 +17,7 @@ public class MonSuperSystemeView
     public void run() 
     {
         Scanner scanner = new Scanner(System.in);
-        int choix = 0;
+        int choix;
 
         do
         {

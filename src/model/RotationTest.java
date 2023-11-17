@@ -18,7 +18,7 @@ public class RotationTest extends Test
         this.result = result;
     }
 
-    /**
+    /*
      * GETTER & SETTER
      */
 

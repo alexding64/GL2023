@@ -15,7 +15,7 @@ public class AdditionTest extends Test
         this.matrix = matrix;
     }
 
-    /**
+    /*
      * GETTER & SETTER
      */
 
