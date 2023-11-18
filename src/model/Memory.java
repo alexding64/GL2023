@@ -85,6 +85,10 @@ public class Memory extends Component
         this.setCost = setCost;
     }
 
+    /**
+     * Getter of data
+     * @return data
+     */
     public Map<String, Matrix> getData() { return data; }
 
 }

@@ -97,6 +97,11 @@ public class TestPlan
         return testPlan;
     }
 
+    /**
+     * Parse a matrix
+     * @param matrixString
+     * @return matrix
+     */
     private static int[][] parseMatrix(String matrixString) {
         // Remove brackets and split into rows
         String[] rows = matrixString.replaceAll("\\[\\[", "")

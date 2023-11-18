@@ -4,24 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="- Avancement execution tests&#10;- Mise en place du mvc&#10;- Ajout doc">
+    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Modifs suite à AQ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/AdditionNTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AdditionNTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/AdditionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AdditionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cpu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Memory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MirrorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MirrorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/OutputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/OutputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RotationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TestPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TestPlan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MonSuperSysteme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MonSuperSystemeView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +95,11 @@
       <workItem from="1698863440716" duration="1763000" />
       <workItem from="1699195943720" duration="6300000" />
       <workItem from="1699459050587" duration="986000" />
-      <workItem from="1699734430005" duration="3870000" />
+      <workItem from="1699734430005" duration="3911000" />
+      <workItem from="1700063070323" duration="26000" />
+      <workItem from="1700063116188" duration="180000" />
+      <workItem from="1700063347210" duration="27000" />
+      <workItem from="1700334520780" duration="631000" />
     </task>
     <task id="LOCAL-00001" summary="Compilation + Rectification menu">
       <option name="closed" value="true" />
@@ -158,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699201702269</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Modifs suite à AQ">
+      <option name="closed" value="true" />
+      <created>1699738371934</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699738371934</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +181,7 @@
     <MESSAGE value="Correction liste TestPlan&#10;Ajout structure Execution" />
     <MESSAGE value="Remise norme conventions &lt;&lt;longueur de lignes&gt;&gt;" />
     <MESSAGE value="- Avancement execution tests&#10;- Mise en place du mvc&#10;- Ajout doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Avancement execution tests&#10;- Mise en place du mvc&#10;- Ajout doc" />
+    <MESSAGE value="Modifs suite à AQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifs suite à AQ" />
   </component>
 </project>

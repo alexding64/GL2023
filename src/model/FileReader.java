@@ -118,6 +118,11 @@ public class FileReader
         return values;
     }
 
+    /**
+     * Get lines from a file
+     * @param file
+     * @return a list of lines
+     */
     public static List<String> getLinesFromFile(File file)
     {
         List<String> values = new ArrayList<>();
