@@ -1,8 +1,5 @@
 package model;
 
-import model.Component;
-import model.Matrix;
-
 import java.util.Map;
 
 public class Memory extends Component
@@ -10,7 +7,7 @@ public class Memory extends Component
 
     private int setCost;
     private int getCost;
-    private Map<String, Matrix> data;
+    private final Map<String, Matrix> data;
 
     /**
      * Constructor of Memory class
@@ -48,7 +45,7 @@ public class Memory extends Component
     }
 
 
-    /**
+    /*
      * GETTER & SETTER
      */
 
@@ -87,5 +84,11 @@ public class Memory extends Component
     {
         this.setCost = setCost;
     }
+
+    /**
+     * Getter of data
+     * @return data
+     */
+    public Map<String, Matrix> getData() { return data; }
 
 }

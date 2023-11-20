@@ -1,7 +1,5 @@
 package model;
 
-import model.Cpu;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -12,24 +10,15 @@ import java.util.Scanner;
 public class FileReader
 {
     /**
-     * Get the list of test plans
-     * @return the list of test plans
-     */
-    public String[] getTestPlanList()
-    {
-        return new String['0'];
-    }
-
-    /**
-     * Give the list of CPU available in the directoryPath
+     * Give the list of item (CPU, memory, controller output or test plan) available in the directoryPath
      * @param directoryPath the directory path
-     * @return the cpu list in table of String
+     * @return the item list in table of String
      */
-    public String[] getCpuList(String directoryPath) throws FileNotFoundException
+    public String[] getItemList(String directoryPath) throws FileNotFoundException
     {
         File folder = new File(directoryPath);
         File[] files = folder.listFiles();
-        List<String> cpuNames = new ArrayList<>();
+        List<String> itemNames = new ArrayList<>();
 
         if (files != null)
         {
@@ -37,7 +26,7 @@ public class FileReader
             {
                 if (file.isFile() && file.getName().endsWith(".txt"))
                 {
-                    cpuNames.add(file.getName().replace(".txt", ""));
+                    itemNames.add(file.getName().replace(".txt", ""));
                 }
             }
         } else
@@ -45,63 +34,7 @@ public class FileReader
             throw new FileNotFoundException("Le fichier n'a pas été trouvé");
         }
 
-        return cpuNames.toArray(new String[0]);
-    }
-
-    /**
-     * Give the list of memory available in the directoryPath
-     * @param directoryPath the directory path
-     * @return the memory list in table of String
-     */
-    public String[] getMemoryList(String directoryPath) throws FileNotFoundException
-    {
-        File folder = new File(directoryPath);
-        File[] files = folder.listFiles();
-        List<String> memoryNames = new ArrayList<>();
-
-        if (files != null)
-        {
-            for (File file : files)
-            {
-                if (file.isFile() && file.getName().endsWith(".txt"))
-                {
-                	memoryNames.add(file.getName().replace(".txt", ""));
-                }
-            }
-        } else
-        {
-            throw new FileNotFoundException("Le fichier n'a pas été trouvé");
-        }
-
-        return memoryNames.toArray(new String[0]);
-    }
-
-    /**
-     * Give the list of output available in the directoryPath
-     * @param directoryPath the directory path
-     * @return the output list in table of String
-     */
-    public String[] getOutputCtrlList(String directoryPath) throws FileNotFoundException
-    {
-        File folder = new File(directoryPath);
-        File[] files = folder.listFiles();
-        List<String> outputNames = new ArrayList<>();
-
-        if (files != null)
-        {
-            for (File file : files)
-            {
-                if (file.isFile() && file.getName().endsWith(".txt"))
-                {
-                	outputNames.add(file.getName().replace(".txt", ""));
-                }
-            }
-        } else
-        {
-            throw new FileNotFoundException("Le fichier n'a pas été trouvé");
-        }
-
-        return outputNames.toArray(new String[0]);
+        return itemNames.toArray(new String[0]);
     }
 
     /**
@@ -115,7 +48,8 @@ public class FileReader
         List<String> parametersList = getValuesFromFile(item);
         String[] fileName = path.split("/");
         return new Cpu(fileName[fileName.length-1], Integer.parseInt(parametersList.get(0)),
-                Integer.parseInt(parametersList.get(1)), Integer.parseInt(parametersList.get(2)));
+                Integer.parseInt(parametersList.get(1)), Integer.parseInt(parametersList.get(2)),
+                Integer.parseInt(parametersList.get(3)));
     }
 
     /**
@@ -129,7 +63,7 @@ public class FileReader
         List<String> parametersList = getValuesFromFile(item);
         String[] fileName = path.split("/");
         return new Memory(fileName[fileName.length-1], Integer.parseInt(parametersList.get(0)),
-                Integer.parseInt(parametersList.get(1)), new HashMap<String, Matrix>());
+                Integer.parseInt(parametersList.get(1)), new HashMap<>());
     }
 
     /**
@@ -147,6 +81,16 @@ public class FileReader
     }
 
     /**
+     * Create an output with values in the file path
+     * @param path of the file chosen
+     * @return the output created
+     */
+    public TestPlan getTestPlan(String path)
+    {
+        return TestPlan.fromFile(path);
+    }
+
+    /**
      * Method to extract values in a text file
      * @param file the file with values to extract
      * @return values extracted in a table of String
@@ -154,7 +98,7 @@ public class FileReader
     private static List<String> getValuesFromFile(File file)
     {
         List<String> values = new ArrayList<>();
-        Scanner myReader = null;
+        Scanner myReader;
         try
         {
             myReader = new Scanner(file);
@@ -165,6 +109,29 @@ public class FileReader
                     String value = line[1];
                     values.add(value);
                 }
+            }
+            myReader.close();
+        } catch (FileNotFoundException e)
+        {
+            throw new RuntimeException(e);
+        }
+        return values;
+    }
+
+    /**
+     * Get lines from a file
+     * @param file
+     * @return a list of lines
+     */
+    public static List<String> getLinesFromFile(File file)
+    {
+        List<String> values = new ArrayList<>();
+        Scanner myReader;
+        try
+        {
+            myReader = new Scanner(file);
+            while (myReader.hasNextLine()) {
+                values.add(myReader.nextLine());
             }
             myReader.close();
         } catch (FileNotFoundException e)

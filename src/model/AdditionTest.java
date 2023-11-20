@@ -7,16 +7,15 @@ public class AdditionTest extends Test
 
     /**
      * Constructor of AdditionTest class
-     * @param name of the test
      * @param matrix the address of the matrix
      */
-    public AdditionTest(String name, String matrix) 
+    public AdditionTest(String matrix)
     {
-    	super(name);
+    	super("Addition");
         this.matrix = matrix;
     }
 
-    /**
+    /*
      * GETTER & SETTER
      */
 

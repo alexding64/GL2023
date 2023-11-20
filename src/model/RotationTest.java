@@ -13,11 +13,12 @@ public class RotationTest extends Test
      */
     public RotationTest(String matrix, String result) 
     {
+        super("Rotation");
         this.matrix = matrix;
         this.result = result;
     }
 
-    /**
+    /*
      * GETTER & SETTER
      */
 

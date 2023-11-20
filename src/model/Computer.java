@@ -1,8 +1,5 @@
 package model;
 
-import model.AdditionNTest;
-import model.AdditionTest;
-
 import java.util.Map;
 
 public class Computer 
@@ -34,14 +31,17 @@ public class Computer
     public void exec()
     {
     	initMemory(testPlan.getMatrices());
+        int totalCost = 0;
         for (Test test : testPlan.getTests())
         {
             int cost = execTest(test);
+            totalCost += cost;
             outputController.log("Coût du test : " + cost);
         }
+        outputController.log("Coût total du plan de test : " + totalCost);
     }
 
-    /**
+    /*
      * GETTER & SETTER
      */
 
@@ -84,9 +84,8 @@ public class Computer
     /**
      * Load matrices in the memory
      * @param mat the matrices we want to use
-     * @return true if the memory is initialized
      */
-    private boolean initMemory(Map<String, Matrix> mat)
+    private void initMemory(Map<String, Matrix> mat)
     {
         for (Map.Entry<String, Matrix> entry : mat.entrySet())
         {
@@ -94,7 +93,6 @@ public class Computer
             Matrix matrix = entry.getValue();
             memory.set(address, matrix);
         }
-        return true;
     }
 
     /**
@@ -104,41 +102,35 @@ public class Computer
      */
     private int execTest(Test test)
     {
-        int cost = 0;
+        Cpu.total_cost = 0;
         switch (test.getOperationName())
         {
             case "Addition" :
-                cost = scalarAddition(((AdditionTest)test).getMatrix());
+                scalarAddition(((AdditionTest)test).getMatrix());
                 break;
             case "AdditionN" :
-                cost = scalarNAddition(((AdditionNTest)test).getMatrix1(),
+                scalarNAddition(((AdditionNTest)test).getMatrix1(),
                                             ((AdditionNTest)test).getMatrix2(),
                                             ((AdditionNTest)test).getResult());
                 break;
             case "Rotation" :
-                cost = rotation(((RotationTest)test).getMatrix(), ((RotationTest)test).getResult());
+                rotation(((RotationTest)test).getMatrix(), ((RotationTest)test).getResult());
                 break;
             default: // Mirror
-                cost = mirror(((MirrorTest)test).getMatrix(), ((MirrorTest)test).getResult());
+                mirror(((MirrorTest)test).getMatrix(), ((MirrorTest)test).getResult());
                 break;
         }
-        return 0;
+        return Cpu.total_cost;
     }
 
     /**
      * Execute a scalar addition with the source matrix
      * @param src the address of the source matrix
-     * @return cost
      */
-    private int scalarAddition(String src)
+    private void scalarAddition(String src)
     {
         Matrix matrix = memory.get(src);
-        if (matrix.getSize() == 2)
-        {
-            return cpu.resolution(matrix);
-        }
-        //TODO
-        return 0;
+        Cpu.resolution(matrix);
     }
 
     /**
@@ -146,42 +138,33 @@ public class Computer
      * @param mat1 the address of the first matrix
      * @param mat2 the address of the second matrix
      * @param dest the address of the result matrix
-     * @return cost
      */
-    private int scalarNAddition(String mat1, String mat2, String dest)
+    private void scalarNAddition(String mat1, String mat2, String dest)
     {
-        return 0;
+        Matrix matrix1 = memory.get(mat1);
+        Matrix matrix2 = memory.get(mat2);
+        memory.set(dest, Cpu.addition(matrix1, matrix2));
     }
 
     /**
      * Execute a rotation and put the result in the map at dest
      * @param src the address of the source matrix
      * @param dest the address pf the destination matrix
-     * @return
      */
-    private int rotation(String src, String dest)
+    private void rotation(String src, String dest)
     {
         Matrix matrix = memory.get(src);
-        if (matrix.getSize() == 2) {
-            memory.set(dest, cpu.rotation(matrix));
-        }
-        //TODO
-        return 0;
+        memory.set(dest, Cpu.rotation(matrix));
     }
 
     /**
      * Execute a mirror and put the result int the map at dest
      * @param src the address of the source matrix
      * @param dest the address of the destination matrix
-     * @return
      */
-    private int mirror(String src, String dest)
+    private void mirror(String src, String dest)
     {
         Matrix matrix = memory.get(src);
-        if (matrix.getSize() == 2) {
-            memory.set(dest, cpu.permutation(matrix));
-        }
-        //TODO
-        return 0;
+        memory.set(dest, Cpu.permutation(matrix));
     }
 }

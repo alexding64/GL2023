@@ -1,7 +1,5 @@
 package model;
 
-import model.Component;
-
 import java.util.logging.Logger;
 
 public class OutputController extends Component

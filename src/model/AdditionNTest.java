@@ -16,13 +16,13 @@ public class AdditionNTest extends Test
      */
     public AdditionNTest(String matrix1, String matrix2, String result)
     {
-        super();
+        super("AdditionN");
         this.matrix1 = matrix1;
         this.matrix2 = matrix2;
         this.result = result;
     }
 
-    /**
+    /*
      * GETTER & SETTER
      */
 
