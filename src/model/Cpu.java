@@ -8,7 +8,7 @@ public class Cpu extends Component
     private static int rotationCost;
     private static int resolutionCost;
     private static int additionCost;
-    public static int totalCost;
+    private static int totalCost;
 
     public Cpu(String name, int permutationCost, int rotationCost, int resolutionCost, int additionCost)
     {
@@ -344,5 +344,23 @@ public class Cpu extends Component
     public void setResolutionCost(int resolutionCost)
     {
         Cpu.resolutionCost = resolutionCost;
+    }
+
+    /**
+     * Getter of totalCost
+     * @return totalCost the total cost of the operations on the cpu
+     */
+    public int getTotalCost()
+    {
+        return totalCost;
+    }
+
+    /**
+     * Setter of totalCost
+     * @param totalCost the total cost of the operations (should be 0 on initialization)
+     */
+    public void setTotalCost(int totalCost)
+    {
+        Cpu.totalCost = totalCost;
     }
 }

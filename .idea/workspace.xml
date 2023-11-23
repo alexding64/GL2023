@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Modifs suite à AQ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Computer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/TestPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TestPlan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MonSuperSystemeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MonSuperSystemeView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
