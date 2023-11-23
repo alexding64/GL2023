@@ -2,6 +2,10 @@ package model;
 
 import java.util.Map;
 
+/** Class that represent the Computer on which we will execute test plan
+ * @author Célian Pithon
+ * @version 1
+ */
 public class Computer 
 {
 	

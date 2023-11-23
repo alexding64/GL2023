@@ -7,6 +7,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
+/** Class related to all the operations needed to read file
+ * @author Célian Pithon, Aubin Binaut
+ * @version 1
+ */
 public class FileReader
 {
     /**

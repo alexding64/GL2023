@@ -2,6 +2,10 @@ package model;
 
 import java.util.logging.Logger;
 
+/** Class related to the logging of the operations on matrixes
+ * @author Célian Pithon
+ * @version 1
+ */
 public class OutputController extends Component
 {
 	

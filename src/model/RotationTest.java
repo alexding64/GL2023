@@ -1,5 +1,9 @@
 package model;
 
+/** Class used to represent the rotation operation in a test plan
+ * @author Aurélien Paquet
+ * @version 1
+ */
 public class RotationTest extends Test
 {
 	

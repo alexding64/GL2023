@@ -1,6 +1,9 @@
 package model;
 
-
+/** Class representing the central processing unit
+ * @author Aubin Binaut
+ * @version 1
+ */
 public class Cpu extends Component
 {
 	

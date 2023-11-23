@@ -5,7 +5,10 @@ import model.*;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-
+/** Class related to get user inputs
+ * @author Célian Pithon, Aurélien Paquet
+ * @version 1
+ */
 public class InputController 
 {
 	

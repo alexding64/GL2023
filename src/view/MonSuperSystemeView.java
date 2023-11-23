@@ -5,6 +5,10 @@ import model.*;
 
 import java.util.Scanner;
 
+/** Class used to represent our system, interacting with the user and executing the test plans
+ * @author Célian Pithon
+ * @version 1
+ */
 public class MonSuperSystemeView
 {
 	

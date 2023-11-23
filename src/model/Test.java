@@ -1,5 +1,9 @@
 package model;
 
+/** Class used to represent an operation in a test plan
+ * @author Alex Ding
+ * @version 1
+ */
 public class Test
 {
 

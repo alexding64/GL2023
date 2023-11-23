@@ -6,8 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Modifs suite à AQ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AdditionNTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AdditionNTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AdditionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AdditionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Component.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Computer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MirrorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MirrorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OutputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/OutputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RotationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TestPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TestPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MonSuperSystemeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MonSuperSystemeView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,21 +58,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/celia/Documents/Polytech/UQAC/T1/GenieLogiciel/Projet/ProjetGL2023",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/dorai/IdeaProjects/GL2023/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/celia/Documents/Polytech/UQAC/T1/GenieLogiciel/Projet/ProjetGL2023&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/dorai/IdeaProjects/GL2023/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\celia\Documents\Polytech\UQAC\T1\GenieLogiciel\Projet\ProjetGL2023\src" />
@@ -99,6 +112,7 @@
       <workItem from="1700063116188" duration="180000" />
       <workItem from="1700063347210" duration="27000" />
       <workItem from="1700334520780" duration="631000" />
+      <workItem from="1700755963947" duration="3407000" />
     </task>
     <task id="LOCAL-00001" summary="Compilation + Rectification menu">
       <option name="closed" value="true" />

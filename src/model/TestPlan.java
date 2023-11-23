@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/** Class used to represent the test plan, using a list of operations and matrixes
+ * @author Aubin Binaut
+ */
 public class TestPlan 
 {
 
