@@ -30,13 +30,16 @@ public class TestPlan
             i++;
         } while (n == 0);
 
-        for (int j = 0; j < n; j++) {
-            while (lines.get(i).isEmpty()) {
+        for (int j = 0; j < n; j++)
+        {
+            while (lines.get(i).isEmpty())
+            {
                 i++;
             }
             String[] line = lines.get(i).replace(" ", "").split(":");
             String name = line[0];
-            int separator = line[1].indexOf(","); // finds the separator between the size and the data
+            /* finds the separator between the size and the data */
+            int separator = line[1].indexOf(",");
             int size = Integer.parseInt(line[1].substring(0, separator));
             int[][] data = parseMatrix(line[1].substring(separator+1));
             Matrix matrix = new Matrix(size, data);
@@ -56,8 +59,10 @@ public class TestPlan
 
         testPlan.tests = new Test[m];
 
-        for (int j = 0; j < m; j++) {
-            while (lines.get(i).isEmpty()) {
+        for (int j = 0; j < m; j++)
+        {
+            while (lines.get(i).isEmpty())
+            {
                 i++;
             }
             String line = lines.get(i).replace(" ", "");
@@ -69,7 +74,8 @@ public class TestPlan
                     String[] matricesCalculate = line.substring(separator+1)
                             .replaceAll("(?i)additionn\\(", "").replace(")", "")
                             .split(",");
-                    testPlan.tests[j] = new AdditionNTest(matricesCalculate[0], matricesCalculate[1], result);
+                    testPlan.tests[j] = new AdditionNTest(matricesCalculate[0],
+                            matricesCalculate[1], result);
                 }
                 else {
                     String matrixCalculate = line.replaceAll("(?i)addition\\(", "")
@@ -114,9 +120,11 @@ public class TestPlan
         int[][] matrix = new int[numRows][numCols];
 
         // Parse each element and populate the matrix
-        for (int i = 0; i < numRows; i++) {
+        for (int i = 0; i < numRows; i++)
+        {
             String[] elements = rows[i].split(",");
-            for (int j = 0; j < numCols; j++) {
+            for (int j = 0; j < numCols; j++)
+            {
                 matrix[i][j] = Integer.parseInt(elements[j]);
             }
         }

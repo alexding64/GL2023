@@ -38,8 +38,7 @@ public class InputController
         {
 	        /* Print in red */
 	        System.out.print("\u001B[31m" + selectedCpu + "\u001B[0m"); // ANSI red
-	    } else
-        {
+	    } else {
             /* Print in green */
 	        System.out.print("\u001B[32m" + selectedCpu + "\u001B[0m"); // ANSI green
 	    }
@@ -50,8 +49,7 @@ public class InputController
         {
             /* Print in red */
 	        System.out.print("\u001B[31m" + selectedMemory + "\u001B[0m"); // ANSI red
-	    } else
-        {
+	    } else {
             /* Print in green */
 	        System.out.print("\u001B[32m" + selectedMemory + "\u001B[0m"); // ANSI green
 	    }
@@ -62,8 +60,7 @@ public class InputController
         {
             /* Print in red */
 	        System.out.print("\u001B[31m" + selectedController + "\u001B[0m"); // ANSI red
-	    } else
-        {
+	    } else {
             /* Print in green */
 	        System.out.print("\u001B[32m" + selectedController + "\u001B[0m"); // ANSI green
 	    }
@@ -74,8 +71,7 @@ public class InputController
         {
             /* Print in red */
 	        System.out.print("\u001B[31m" + selectedTestPlan + "\u001B[0m"); // ANSI red
-	    } else
-        {
+	    } else {
             /* Print in green */
 	        System.out.print("\u001B[32m" + selectedTestPlan + "\u001B[0m"); // ANSI green
 	    }
@@ -125,10 +121,10 @@ public class InputController
             if (userChoice >= 1 && userChoice <= testPlanList.length)
             {
                 selectedTestPlan = testPlanList[userChoice - 1];
-                testPlan = fileReader.getTestPlan(testplanPath + "/" + testPlanList[userChoice - 1] + ".txt");
+                testPlan = fileReader.getTestPlan(testplanPath + "/" + testPlanList[userChoice - 1]
+                        + ".txt");
                 break;
-            } else if (userChoice == 0)
-            {
+            } else if (userChoice == 0) {
                 break;
             }
         }
@@ -170,8 +166,7 @@ public class InputController
                 selectedCpu = cpuList[userChoice - 1];
                 cpu = fileReader.getCpu(cpuPath + "/" + cpuList[userChoice - 1] + ".txt");
                 break; 
-            } else if (userChoice == 0)
-            {
+            } else if (userChoice == 0) {
                 break; 
             }
         }
@@ -212,10 +207,10 @@ public class InputController
             if (userChoice >= 1 && userChoice <= memoryList.length)
             {
                 selectedMemory = memoryList[userChoice - 1];
-                memory = fileReader.getMemory(memoryPath + "/" + memoryList[userChoice - 1] + ".txt");
+                memory = fileReader.getMemory(memoryPath + "/" + memoryList[userChoice - 1]
+                        + ".txt");
                 break;
-            } else if (userChoice == 0)
-            {
+            } else if (userChoice == 0) {
                 break; 
             }
         }
@@ -256,10 +251,10 @@ public class InputController
             if (userChoice >= 1 && userChoice <= outputCtrlList.length)
             {
                 selectedController = outputCtrlList[userChoice - 1];
-                outputController = fileReader.getOutputController(outputPath + "/" + outputCtrlList[userChoice - 1] + ".txt");
+                outputController = fileReader.getOutputController(outputPath + "/" +
+                        outputCtrlList[userChoice - 1] + ".txt");
                 break; 
-            } else if (userChoice == 0)
-            {
+            } else if (userChoice == 0) {
                 break; 
             }
         }
@@ -319,12 +314,10 @@ public class InputController
                 if (choice >= 0 && choice <= maxChoice)
                 {
                     break; // Exit
-                } else
-                {
+                } else {
                     System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
                 }
-            } else
-            {
+            } else {
                 scanner.next();
                 System.out.println("Choix invalide. Veuillez sélectionner une option valide.");
             }

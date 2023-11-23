@@ -8,7 +8,7 @@ public class Cpu extends Component
     private static int rotationCost;
     private static int resolutionCost;
     private static int additionCost;
-    public static int total_cost;
+    public static int totalCost;
 
     public Cpu(String name, int permutationCost, int rotationCost, int resolutionCost, int additionCost)
     {
@@ -37,7 +37,7 @@ public class Cpu extends Component
                     " n entier >= 1 pour la permutation.");
         }
 
-        total_cost += permutationCost;
+        totalCost += permutationCost;
 
         if (size == 2)
         {
@@ -51,8 +51,7 @@ public class Cpu extends Component
             data[1][0] = temp;
             return m; // return the permuted matrix
         }
-        else
-        {
+        else {
             int[][] dataTl = new int[size/2][size/2];
             int[][] dataBl = new int[size/2][size/2];
             int[][] dataTr = new int[size/2][size/2];
@@ -112,7 +111,7 @@ public class Cpu extends Component
                     "n entier >= 1 pour la permutation.");
         }
 
-        total_cost += rotationCost;
+        totalCost += rotationCost;
 
         if (size == 2)
         {
@@ -125,8 +124,7 @@ public class Cpu extends Component
 
             return matrix; // Return the changed matrix
         }
-        else
-        {
+        else {
             int[][] dataTl = new int[size/2][size/2];
             int[][] dataBl = new int[size/2][size/2];
             int[][] dataTr = new int[size/2][size/2];
@@ -184,7 +182,7 @@ public class Cpu extends Component
                     "La matrice doit être de taille 2x2 pour la résolution.");
         }
 
-        total_cost += resolutionCost;
+        totalCost += resolutionCost;
 
         int[][] data = m.getData();
         for (int i = 0; i < 2; i++)
@@ -221,7 +219,7 @@ public class Cpu extends Component
                     "n entier >= 1 pour l'addition de matrices.");
         }
 
-        total_cost += additionCost;
+        totalCost += additionCost;
 
         if (size1 == 2)
         {
@@ -235,8 +233,7 @@ public class Cpu extends Component
 
             return new Matrix(2, data);
         }
-        else
-        {
+        else {
             int[][] dataTl1 = new int[size1/2][size1/2];
             int[][] dataBl1 = new int[size1/2][size1/2];
             int[][] dataTr1 = new int[size1/2][size1/2];

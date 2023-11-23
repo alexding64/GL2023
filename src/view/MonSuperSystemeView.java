@@ -17,14 +17,14 @@ public class MonSuperSystemeView
     public void run() 
     {
         Scanner scanner = new Scanner(System.in);
-        int choix;
+        int choice;
 
         do
         {
             InputController.displayMainMenu();
-            choix = InputController.getMainMenuChoice();
+            choice = InputController.getMainMenuChoice();
 
-            switch (choix)
+            switch (choice)
             {
                 case 1:
                 	InputController.displayCpuList();
@@ -44,7 +44,6 @@ public class MonSuperSystemeView
                     Cpu cpu = InputController.getCpu();
                     OutputController outputController = InputController.getOutputController();
                     TestPlan testPlan = InputController.getTestPlan();
-                    System.out.println("euqedu : " + cpu + " " + memory + " " + outputController + " " + testPlan);
 
                     if (memory != null && cpu != null
                             && outputController != null && testPlan != null)
@@ -61,7 +60,7 @@ public class MonSuperSystemeView
                     System.out.println(
                             "Choix invalide. Veuillez sélectionner une option valide.");
             }
-        } while (choix != 6);
+        } while (choice != 6);
 
         scanner.close();
     }

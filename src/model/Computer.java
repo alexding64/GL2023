@@ -102,7 +102,7 @@ public class Computer
      */
     private int execTest(Test test)
     {
-        Cpu.total_cost = 0;
+        Cpu.totalCost = 0;
         switch (test.getOperationName())
         {
             case "Addition" :
@@ -120,7 +120,7 @@ public class Computer
                 mirror(((MirrorTest)test).getMatrix(), ((MirrorTest)test).getResult());
                 break;
         }
-        return Cpu.total_cost;
+        return Cpu.totalCost;
     }
 
     /**

@@ -10,7 +10,8 @@ import java.util.Scanner;
 public class FileReader
 {
     /**
-     * Give the list of item (CPU, memory, controller output or test plan) available in the directoryPath
+     * Give the list of item (CPU, memory, controller output or test plan)
+     * available in the directoryPath
      * @param directoryPath the directory path
      * @return the item list in table of String
      */
@@ -29,8 +30,7 @@ public class FileReader
                     itemNames.add(file.getName().replace(".txt", ""));
                 }
             }
-        } else
-        {
+        } else {
             throw new FileNotFoundException("Le fichier n'a pas été trouvé");
         }
 
