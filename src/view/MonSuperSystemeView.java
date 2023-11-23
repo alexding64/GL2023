@@ -57,9 +57,6 @@ public class MonSuperSystemeView
                 case 6:
                     System.out.println("Au revoir !");
                     break;
-                case 9:
-                	oui.test(); //fonction pour tester les calculs des matrices et haut et bas niveau
-                	break;
                 default:
                     System.out.println(
                             "Choix invalide. Veuillez sélectionner une option valide.");
