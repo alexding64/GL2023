@@ -7,19 +7,19 @@ package model;
 public class Cpu extends Component
 {
 	
-    private static int permutationCost;
-    private static int rotationCost;
-    private static int resolutionCost;
-    private static int additionCost;
-    private static int totalCost;
+    private int permutationCost;
+    private int rotationCost;
+    private int resolutionCost;
+    private int additionCost;
+    private int totalCost;
 
     public Cpu(String name, int permutationCost, int rotationCost, int resolutionCost, int additionCost)
     {
         super(name);
-        Cpu.permutationCost = permutationCost;
-        Cpu.rotationCost = rotationCost;
-        Cpu.resolutionCost = resolutionCost;
-        Cpu.additionCost = additionCost;
+        this.permutationCost = permutationCost;
+        this.rotationCost = rotationCost;
+        this.resolutionCost = resolutionCost;
+        this.additionCost = additionCost;
     }
 
     //TODO : create function to initialise corner matrices, duplicated code below (permutation, rotation, resolve)
@@ -29,7 +29,7 @@ public class Cpu extends Component
      * @param m is the matrix to be permuted
      * @return m the permuted matrix
      */
-    public static Matrix permutation(Matrix m) 
+    public Matrix permutation(Matrix m)
     {
         int[][] data = m.getData();
         int size = m.getSize();
@@ -103,7 +103,7 @@ public class Cpu extends Component
      * @param matrix is the matrix to be rotated
      * @return m the rotated matrix
      */
-    public static Matrix rotation(Matrix matrix) 
+    public Matrix rotation(Matrix matrix)
     {
         int[][] data = matrix.getData();
         int size = matrix.getSize();
@@ -175,7 +175,7 @@ public class Cpu extends Component
      * @param m is the matrix to be resolved
      * @return m the resolved matrix
      */
-    public static int resolution(Matrix m)
+    public int resolution(Matrix m)
     {
         int totalSum = 0;
         
@@ -205,7 +205,7 @@ public class Cpu extends Component
      * @param matrix2 is the second matrix to be added
      * @return m the summed matrix
      */
-    public static Matrix addition(Matrix matrix1, Matrix matrix2)
+    public Matrix addition(Matrix matrix1, Matrix matrix2)
     {
         int[][] data1 = matrix1.getData();
         int size1 = matrix1.getSize();
@@ -310,7 +310,7 @@ public class Cpu extends Component
      */
     public void setPermutationCost(int permutationCost)
     {
-        Cpu.permutationCost = permutationCost;
+        this.permutationCost = permutationCost;
     }
 
     /**
@@ -328,7 +328,7 @@ public class Cpu extends Component
      */
     public void setRotationCost(int rotationCost)
     {
-        Cpu.rotationCost = rotationCost;
+        this.rotationCost = rotationCost;
     }
 
     /**
@@ -346,7 +346,7 @@ public class Cpu extends Component
      */
     public void setResolutionCost(int resolutionCost)
     {
-        Cpu.resolutionCost = resolutionCost;
+        this.resolutionCost = resolutionCost;
     }
 
     /**
@@ -364,6 +364,6 @@ public class Cpu extends Component
      */
     public void setTotalCost(int totalCost)
     {
-        Cpu.totalCost = totalCost;
+        this.totalCost = totalCost;
     }
 }
