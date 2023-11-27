@@ -31,13 +31,4 @@ public class OutputController extends Component
         Logger logger = Logger.getLogger(OutputController.class.getName());
     	logger.info(msg.toString());
     }
-
-    /**
-     * Display a message
-     * @param msg to log
-     */
-    public void logFree(Object msg)
-    {
-    	
-    }
 }

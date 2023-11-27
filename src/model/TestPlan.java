@@ -112,7 +112,7 @@ public class TestPlan
      * @return matrix
      */
     private static int[][] parseMatrix(String matrixString) {
-        // Remove brackets and split into rows
+        /* Remove brackets and split into rows */
         String[] rows = matrixString.replaceAll("\\[\\[", "")
                 .replaceAll("]]", "")
                 .split("],\\[");
@@ -122,7 +122,7 @@ public class TestPlan
 
         int[][] matrix = new int[numRows][numCols];
 
-        // Parse each element and populate the matrix
+        /* Parse each element and populate the matrix */
         for (int i = 0; i < numRows; i++)
         {
             String[] elements = rows[i].split(",");

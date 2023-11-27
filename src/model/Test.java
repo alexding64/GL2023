@@ -18,11 +18,6 @@ public class Test
         this.operationName = operationName;
     }
 
-    public Test()
-    {
-
-    }
-
     /*
      * GETTER & SETTER
      */

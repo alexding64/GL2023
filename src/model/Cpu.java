@@ -13,6 +13,14 @@ public class Cpu extends Component
     private int additionCost;
     private int totalCost;
 
+    /**
+     * Constructor of Cpu
+     * @param name
+     * @param permutationCost
+     * @param rotationCost
+     * @param resolutionCost
+     * @param additionCost
+     */
     public Cpu(String name, int permutationCost, int rotationCost, int resolutionCost, int additionCost)
     {
         super(name);
@@ -21,8 +29,6 @@ public class Cpu extends Component
         this.resolutionCost = resolutionCost;
         this.additionCost = additionCost;
     }
-
-    //TODO : create function to initialise corner matrices, duplicated code below (permutation, rotation, resolve)
 
     /**
      * Method to permute a 2x2 model.Matrix
