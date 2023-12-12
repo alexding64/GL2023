@@ -1,34 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="" />
+    <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Modifs suite à AQ">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OutputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/OutputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TestPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TestPlan.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;celianpth&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7d97d225-11a4-4f3a-b8db-5567cead152a" />
+        <option name="url" value="https://github.com/alexding64/GL2023.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2Wr1bMAXyuIehz43bAIARTpfxUX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "onboarding.tips.debug.path": "C:/Users/dorai/IdeaProjects/GL2023/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dorai/IdeaProjects/GL2023/Projet_POO&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/dorai/IdeaProjects/GL2023/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\celia\Documents\Polytech\UQAC\T1\GenieLogiciel\Projet\ProjetGL2023\src" />
+      <recent name="C:\Users\celia\Documents\Polytech\UQAC\T1\GenieLogiciel\Projet\ProjetGL2023\configFiles" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="GL2023" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -38,18 +93,102 @@
       <option name="presentableId" value="Default" />
       <updated>1697475958484</updated>
       <workItem from="1697475959545" duration="1000" />
+      <workItem from="1698248574623" duration="497000" />
+      <workItem from="1698419989830" duration="11095000" />
+      <workItem from="1698863440716" duration="1763000" />
+      <workItem from="1699195943720" duration="6300000" />
+      <workItem from="1699459050587" duration="986000" />
+      <workItem from="1699734430005" duration="3911000" />
+      <workItem from="1700063070323" duration="26000" />
+      <workItem from="1700063116188" duration="180000" />
+      <workItem from="1700063347210" duration="27000" />
+      <workItem from="1700334520780" duration="631000" />
+      <workItem from="1700755963947" duration="3407000" />
+      <workItem from="1700762736751" duration="631000" />
+      <workItem from="1700765806962" duration="82000" />
+      <workItem from="1700783800059" duration="1367000" />
     </task>
+    <task id="LOCAL-00001" summary="Compilation + Rectification menu">
+      <option name="closed" value="true" />
+      <created>1698521097916</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698521097916</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changement structure dossier config&#10;Ajout attributs dans fichiers txt">
+      <option name="closed" value="true" />
+      <created>1698521844382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698521844382</updated>
+    </task>
+    <task id="LOCAL-00003" summary="création des composants apres choix">
+      <option name="closed" value="true" />
+      <created>1698526160274</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698526160274</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Correction liste TestPlan&#10;Ajout structure Execution">
+      <option name="closed" value="true" />
+      <created>1698592389631</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698592389631</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Remise norme conventions &lt;&lt;longueur de lignes&gt;&gt;">
+      <option name="closed" value="true" />
+      <created>1698863985482</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698863985482</updated>
+    </task>
+    <task id="LOCAL-00006" summary="- Avancement execution tests&#10;- Mise en place du mvc&#10;- Ajout doc">
+      <option name="closed" value="true" />
+      <created>1699201702268</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699201702269</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modifs suite à AQ">
+      <option name="closed" value="true" />
+      <created>1699738371934</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699738371934</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Compilation + Rectification menu" />
+    <MESSAGE value="Changement structure dossier config&#10;Ajout attributs dans fichiers txt" />
+    <MESSAGE value="création des composants apres choix" />
+    <MESSAGE value="Correction liste TestPlan&#10;Ajout structure Execution" />
+    <MESSAGE value="Remise norme conventions &lt;&lt;longueur de lignes&gt;&gt;" />
+    <MESSAGE value="- Avancement execution tests&#10;- Mise en place du mvc&#10;- Ajout doc" />
+    <MESSAGE value="Modifs suite à AQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifs suite à AQ" />
   </component>
 </project>
