@@ -2,6 +2,10 @@ package model;
 
 import java.util.Random;
 
+/** Class used to represent the mathematical object matrix
+ * @author Aurélien Paquet
+ * @version 1
+ */
 public class Matrix 
 {
 	

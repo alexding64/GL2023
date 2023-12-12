@@ -1,5 +1,9 @@
 package model;
 
+/** Class representing a component
+ * @author Alex Ding
+ * @version 1
+ */
 public class Component
 {
 	

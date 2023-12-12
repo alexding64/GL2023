@@ -2,6 +2,10 @@ package model;
 
 import java.util.Map;
 
+/** Class that represent the Computer on which we will execute test plan
+ * @author Célian Pithon
+ * @version 1
+ */
 public class Computer 
 {
 	
@@ -102,7 +106,7 @@ public class Computer
      */
     private int execTest(Test test)
     {
-        Cpu.total_cost = 0;
+        cpu.setTotalCost(0);
         switch (test.getOperationName())
         {
             case "Addition" :
@@ -120,7 +124,7 @@ public class Computer
                 mirror(((MirrorTest)test).getMatrix(), ((MirrorTest)test).getResult());
                 break;
         }
-        return Cpu.total_cost;
+        return cpu.getTotalCost();
     }
 
     /**
@@ -130,7 +134,7 @@ public class Computer
     private void scalarAddition(String src)
     {
         Matrix matrix = memory.get(src);
-        Cpu.resolution(matrix);
+        cpu.resolution(matrix);
     }
 
     /**
@@ -143,7 +147,7 @@ public class Computer
     {
         Matrix matrix1 = memory.get(mat1);
         Matrix matrix2 = memory.get(mat2);
-        memory.set(dest, Cpu.addition(matrix1, matrix2));
+        memory.set(dest, cpu.addition(matrix1, matrix2));
     }
 
     /**
@@ -154,7 +158,7 @@ public class Computer
     private void rotation(String src, String dest)
     {
         Matrix matrix = memory.get(src);
-        memory.set(dest, Cpu.rotation(matrix));
+        memory.set(dest, cpu.rotation(matrix));
     }
 
     /**
@@ -165,6 +169,6 @@ public class Computer
     private void mirror(String src, String dest)
     {
         Matrix matrix = memory.get(src);
-        memory.set(dest, Cpu.permutation(matrix));
+        memory.set(dest, cpu.permutation(matrix));
     }
 }

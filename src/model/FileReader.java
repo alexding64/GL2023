@@ -7,10 +7,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
+/** Class related to all the operations needed to read file
+ * @author Célian Pithon, Aubin Binaut
+ * @version 1
+ */
 public class FileReader
 {
     /**
-     * Give the list of item (CPU, memory, controller output or test plan) available in the directoryPath
+     * Give the list of item (CPU, memory, controller output or test plan)
+     * available in the directoryPath
      * @param directoryPath the directory path
      * @return the item list in table of String
      */
@@ -29,8 +34,7 @@ public class FileReader
                     itemNames.add(file.getName().replace(".txt", ""));
                 }
             }
-        } else
-        {
+        } else {
             throw new FileNotFoundException("Le fichier n'a pas été trouvé");
         }
 

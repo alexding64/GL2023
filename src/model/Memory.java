@@ -2,6 +2,10 @@ package model;
 
 import java.util.Map;
 
+/** Class representing the memory
+ * @author Aurélien Paquet
+ * @version 1
+ */
 public class Memory extends Component
 {
 

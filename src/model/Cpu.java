@@ -1,32 +1,41 @@
 package model;
 
-
+/** Class representing the central processing unit
+ * @author Aubin Binaut
+ * @version 1
+ */
 public class Cpu extends Component
 {
 	
-    private static int permutationCost;
-    private static int rotationCost;
-    private static int resolutionCost;
-    private static int additionCost;
-    public static int total_cost;
+    private int permutationCost;
+    private int rotationCost;
+    private int resolutionCost;
+    private int additionCost;
+    private int totalCost;
 
+    /**
+     * Constructor of Cpu
+     * @param name
+     * @param permutationCost
+     * @param rotationCost
+     * @param resolutionCost
+     * @param additionCost
+     */
     public Cpu(String name, int permutationCost, int rotationCost, int resolutionCost, int additionCost)
     {
         super(name);
-        Cpu.permutationCost = permutationCost;
-        Cpu.rotationCost = rotationCost;
-        Cpu.resolutionCost = resolutionCost;
-        Cpu.additionCost = additionCost;
+        this.permutationCost = permutationCost;
+        this.rotationCost = rotationCost;
+        this.resolutionCost = resolutionCost;
+        this.additionCost = additionCost;
     }
-
-    //TODO : create function to initialise corner matrices, duplicated code below (permutation, rotation, resolve)
 
     /**
      * Method to permute a 2x2 model.Matrix
      * @param m is the matrix to be permuted
      * @return m the permuted matrix
      */
-    public static Matrix permutation(Matrix m) 
+    public Matrix permutation(Matrix m)
     {
         int[][] data = m.getData();
         int size = m.getSize();
@@ -37,7 +46,7 @@ public class Cpu extends Component
                     " n entier >= 1 pour la permutation.");
         }
 
-        total_cost += permutationCost;
+        totalCost += permutationCost;
 
         if (size == 2)
         {
@@ -51,8 +60,7 @@ public class Cpu extends Component
             data[1][0] = temp;
             return m; // return the permuted matrix
         }
-        else
-        {
+        else {
             int[][] dataTl = new int[size/2][size/2];
             int[][] dataBl = new int[size/2][size/2];
             int[][] dataTr = new int[size/2][size/2];
@@ -101,7 +109,7 @@ public class Cpu extends Component
      * @param matrix is the matrix to be rotated
      * @return m the rotated matrix
      */
-    public static Matrix rotation(Matrix matrix) 
+    public Matrix rotation(Matrix matrix)
     {
         int[][] data = matrix.getData();
         int size = matrix.getSize();
@@ -112,7 +120,7 @@ public class Cpu extends Component
                     "n entier >= 1 pour la permutation.");
         }
 
-        total_cost += rotationCost;
+        totalCost += rotationCost;
 
         if (size == 2)
         {
@@ -125,8 +133,7 @@ public class Cpu extends Component
 
             return matrix; // Return the changed matrix
         }
-        else
-        {
+        else {
             int[][] dataTl = new int[size/2][size/2];
             int[][] dataBl = new int[size/2][size/2];
             int[][] dataTr = new int[size/2][size/2];
@@ -174,7 +181,7 @@ public class Cpu extends Component
      * @param m is the matrix to be resolved
      * @return m the resolved matrix
      */
-    public static int resolution(Matrix m)
+    public int resolution(Matrix m)
     {
         int totalSum = 0;
         
@@ -184,7 +191,7 @@ public class Cpu extends Component
                     "La matrice doit être de taille 2x2 pour la résolution.");
         }
 
-        total_cost += resolutionCost;
+        totalCost += resolutionCost;
 
         int[][] data = m.getData();
         for (int i = 0; i < 2; i++)
@@ -204,7 +211,7 @@ public class Cpu extends Component
      * @param matrix2 is the second matrix to be added
      * @return m the summed matrix
      */
-    public static Matrix addition(Matrix matrix1, Matrix matrix2)
+    public Matrix addition(Matrix matrix1, Matrix matrix2)
     {
         int[][] data1 = matrix1.getData();
         int size1 = matrix1.getSize();
@@ -221,7 +228,7 @@ public class Cpu extends Component
                     "n entier >= 1 pour l'addition de matrices.");
         }
 
-        total_cost += additionCost;
+        totalCost += additionCost;
 
         if (size1 == 2)
         {
@@ -235,8 +242,7 @@ public class Cpu extends Component
 
             return new Matrix(2, data);
         }
-        else
-        {
+        else {
             int[][] dataTl1 = new int[size1/2][size1/2];
             int[][] dataBl1 = new int[size1/2][size1/2];
             int[][] dataTr1 = new int[size1/2][size1/2];
@@ -310,7 +316,7 @@ public class Cpu extends Component
      */
     public void setPermutationCost(int permutationCost)
     {
-        Cpu.permutationCost = permutationCost;
+        this.permutationCost = permutationCost;
     }
 
     /**
@@ -328,7 +334,7 @@ public class Cpu extends Component
      */
     public void setRotationCost(int rotationCost)
     {
-        Cpu.rotationCost = rotationCost;
+        this.rotationCost = rotationCost;
     }
 
     /**
@@ -346,6 +352,24 @@ public class Cpu extends Component
      */
     public void setResolutionCost(int resolutionCost)
     {
-        Cpu.resolutionCost = resolutionCost;
+        this.resolutionCost = resolutionCost;
+    }
+
+    /**
+     * Getter of totalCost
+     * @return totalCost the total cost of the operations on the cpu
+     */
+    public int getTotalCost()
+    {
+        return totalCost;
+    }
+
+    /**
+     * Setter of totalCost
+     * @param totalCost the total cost of the operations (should be 0 on initialization)
+     */
+    public void setTotalCost(int totalCost)
+    {
+        this.totalCost = totalCost;
     }
 }

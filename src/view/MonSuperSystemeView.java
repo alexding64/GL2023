@@ -5,6 +5,10 @@ import model.*;
 
 import java.util.Scanner;
 
+/** Class used to represent our system, interacting with the user and executing the test plans
+ * @author Célian Pithon
+ * @version 1
+ */
 public class MonSuperSystemeView
 {
 	
@@ -17,14 +21,14 @@ public class MonSuperSystemeView
     public void run() 
     {
         Scanner scanner = new Scanner(System.in);
-        int choix;
+        int choice;
 
         do
         {
             InputController.displayMainMenu();
-            choix = InputController.getMainMenuChoice();
+            choice = InputController.getMainMenuChoice();
 
-            switch (choix)
+            switch (choice)
             {
                 case 1:
                 	InputController.displayCpuList();
@@ -44,7 +48,6 @@ public class MonSuperSystemeView
                     Cpu cpu = InputController.getCpu();
                     OutputController outputController = InputController.getOutputController();
                     TestPlan testPlan = InputController.getTestPlan();
-                    System.out.println("euqedu : " + cpu + " " + memory + " " + outputController + " " + testPlan);
 
                     if (memory != null && cpu != null
                             && outputController != null && testPlan != null)
@@ -57,14 +60,11 @@ public class MonSuperSystemeView
                 case 6:
                     System.out.println("Au revoir !");
                     break;
-                case 9:
-                	oui.test(); //fonction pour tester les calculs des matrices et haut et bas niveau
-                	break;
                 default:
                     System.out.println(
                             "Choix invalide. Veuillez sélectionner une option valide.");
             }
-        } while (choix != 6);
+        } while (choice != 6);
 
         scanner.close();
     }

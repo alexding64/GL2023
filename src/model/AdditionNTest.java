@@ -1,5 +1,9 @@
 package model;
 
+/** Class used to represent the addition operation in a test plan
+ * @author Aurélien Paquet
+ * @version 1
+ */
 public class AdditionNTest extends Test
 {
 	

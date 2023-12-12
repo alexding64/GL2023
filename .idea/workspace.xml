@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ab0b1f0d-d5b6-4638-b55c-87c74d6bf235" name="Changes" comment="Modifs suite à AQ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OutputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/OutputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/TestPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TestPlan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +53,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/celia/Documents/Polytech/UQAC/T1/GenieLogiciel/Projet/ProjetGL2023&quot;,
+    &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dorai/IdeaProjects/GL2023/Projet_POO&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -100,6 +103,10 @@
       <workItem from="1700063116188" duration="180000" />
       <workItem from="1700063347210" duration="27000" />
       <workItem from="1700334520780" duration="631000" />
+      <workItem from="1700755963947" duration="3407000" />
+      <workItem from="1700762736751" duration="631000" />
+      <workItem from="1700765806962" duration="82000" />
+      <workItem from="1700783800059" duration="1367000" />
     </task>
     <task id="LOCAL-00001" summary="Compilation + Rectification menu">
       <option name="closed" value="true" />
